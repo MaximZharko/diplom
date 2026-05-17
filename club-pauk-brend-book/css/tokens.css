@@ -1,0 +1,185 @@
+/* ══════ css/tokens.css ══════ */
+/* ==========================================================================
+   КлубПаук — Colors & Type tokens
+   Billiards + Table Tennis club. Neon red on deep black. Urban, charged, late.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Zen+Dots&display=swap');
+
+@font-face {
+  font-family: 'Zen Dots Kir';
+  src: url('../fonts/ZenDotsKir.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ----- Color: Core surfaces (the dark) ---------------------------------- */
+  /* Locked brand: чёрный #0E0D0D, белый #F3F3F3, серый #939393, красный #6C1A1A */
+  --pk-void:        #000000;          /* Pure black — full-bleed backgrounds, hero  */
+  --pk-ink:         #0E0D0D;          /* App canvas — brand black */
+  --pk-coal:        #181615;          /* Cards, panels */
+  --pk-graphite:    #221F1E;          /* Raised surfaces, header bars */
+  --pk-iron:        #2C2826;          /* Hover surface, dividers on dark */
+
+  /* ----- Color: Brand red scale (oxblood / deep red) ---------------------- */
+  /* Anchored at brand red #6C1A1A (500). Scale derived around it. */
+  --pk-blood-50:    #FBEDED;
+  --pk-blood-100:   #F2C9C9;
+  --pk-blood-200:   #E29A9A;
+  --pk-blood-300:   #C66464;
+  --pk-blood-400:   #A23636;          /* Lifted brand red — hover, focus glow */
+  --pk-blood:       #6C1A1A;          /* BRAND RED — buttons, ratings, accents */
+  --pk-blood-600:   #581414;
+  --pk-blood-700:   #430F0F;
+  --pk-blood-800:   #2E0A0A;
+  --pk-blood-900:   #1A0606;          /* Crushed felt */
+
+  /* ----- Color: Felt + table tones (warmth in the dark) -------------------- */
+  --pk-felt:        #7A0010;          /* Pool table felt, deep red velvet */
+  --pk-amber:       #FFB347;          /* Tungsten lamp glow, 8-ball cue light */
+  --pk-amber-soft:  #F4D58D;          /* Subtle warm highlight */
+
+  /* ----- Color: Foreground on dark ---------------------------------------- */
+  --pk-fg-1:        #F3F3F3;          /* Primary text on dark — brand white */
+  --pk-fg-2:        #939393;          /* Secondary text — brand gray */
+  --pk-fg-3:        #6A6A6A;          /* Tertiary / metadata */
+  --pk-fg-4:        #3E3E3E;          /* Disabled / hairline labels */
+
+  /* ----- Color: Foreground on light (rare — receipts, exports) ------------ */
+  --pk-fg-on-light-1: #14100F;
+  --pk-fg-on-light-2: #4A4441;
+
+  /* ----- Color: Light surfaces (rare — used on receipts, profile cards) --- */
+  --pk-bone:        #F5F2EE;
+  --pk-bone-2:      #E8E2DC;
+
+  /* ----- Color: Semantic (game outcomes, system states) ------------------- */
+  --pk-win:         #34D17A;          /* Match won, rating up */
+  --pk-loss:        var(--pk-blood);  /* Match lost — same as brand on purpose */
+  --pk-draw:        var(--pk-amber);
+  --pk-info:        #4FB6FF;
+  --pk-warning:     #FFB347;
+  --pk-danger:      #FF1733;
+
+  /* ----- Color: Glow / haze (use as box-shadow / filter) ------------------ */
+  --pk-glow-red:    0 0 24px rgba(108, 26, 26, 0.65), 0 0 64px rgba(108, 26, 26, 0.30);
+  --pk-glow-red-sm: 0 0 12px rgba(108, 26, 26, 0.50);
+  --pk-glow-red-lg: 0 0 48px rgba(162, 54, 54, 0.45), 0 0 120px rgba(108, 26, 26, 0.30);
+  --pk-glow-amber:  0 0 18px rgba(255, 179, 71, 0.45);
+
+  /* ----- Color: Borders --------------------------------------------------- */
+  --pk-border-1:    rgba(255, 255, 255, 0.06);   /* Hairline on dark */
+  --pk-border-2:    rgba(255, 255, 255, 0.12);   /* Card edge */
+  --pk-border-red:  rgba(108, 26, 26, 0.65);     /* Active / focus */
+  --pk-border-red-strong: var(--pk-blood);
+
+  /* ----- Type: Families --------------------------------------------------- */
+  --pk-font-display: 'Zen Dots', 'Unbounded', 'Inter', system-ui, sans-serif; /* Big headers, hero, scoreboards — single weight (400), all-caps, geometric */
+  --pk-font-display-kir: 'Zen Dots Kir', 'Zen Dots', 'Unbounded', 'Inter', system-ui, sans-serif; /* Cyrillic display — typography demo only */
+  --pk-font-text:    'Manrope', 'Inter', system-ui, sans-serif;   /* Body, UI */
+  --pk-font-mono:    ui-monospace, Menlo, monospace; /* Scores, ratings, codes */
+
+  /* ----- Type: Weights ---------------------------------------------------- */
+  --pk-w-light:    300;
+  --pk-w-regular:  400;
+  --pk-w-medium:   500;
+  --pk-w-semibold: 600;
+  --pk-w-bold:     700;
+  --pk-w-black:    900;
+
+  /* ----- Type: Display sizes (use Unbounded) ------------------------------ */
+  --pk-fs-hero:     clamp(56px, 9vw, 144px);  /* Marquee hero */
+  --pk-fs-display:  clamp(40px, 6vw, 88px);   /* Section opener */
+  --pk-fs-h1:       clamp(36px, 4.5vw, 56px);
+  --pk-fs-h2:       clamp(28px, 3vw, 40px);
+  --pk-fs-h3:       24px;
+  --pk-fs-h4:       18px;
+
+  /* ----- Type: Body sizes ------------------------------------------------- */
+  --pk-fs-lg:       18px;
+  --pk-fs-base:     15px;
+  --pk-fs-sm:       13px;
+  --pk-fs-xs:       11px;     /* Eyebrow, label, ALL-CAPS */
+  --pk-fs-mono-lg:  44px;     /* Live score, rating */
+  --pk-fs-mono:     14px;
+
+  /* ----- Type: Tracking --------------------------------------------------- */
+  --pk-tr-tight:    -0.02em;
+  --pk-tr-display:  -0.03em;
+  --pk-tr-normal:   0;
+  --pk-tr-wide:     0.08em;
+  --pk-tr-eyebrow:  0.18em;   /* RU labels: «РЕЙТИНГ», «ТУРНИР» */
+
+  /* ----- Type: Line height ------------------------------------------------ */
+  --pk-lh-tight:    1.0;
+  --pk-lh-display:  1.04;
+  --pk-lh-heading:  1.15;
+  --pk-lh-body:     1.55;
+  --pk-lh-loose:    1.7;
+
+  /* ----- Spacing ---------------------------------------------------------- */
+  --pk-s-1:  4px;
+  --pk-s-2:  8px;
+  --pk-s-3:  12px;
+  --pk-s-4:  16px;
+  --pk-s-5:  20px;
+  --pk-s-6:  24px;
+  --pk-s-8:  32px;
+  --pk-s-10: 40px;
+  --pk-s-12: 48px;
+  --pk-s-16: 64px;
+  --pk-s-20: 80px;
+  --pk-s-24: 96px;
+
+  /* ----- Radius ----------------------------------------------------------- */
+  --pk-r-xs:    4px;
+  --pk-r-sm:    8px;
+  --pk-r-md:    12px;
+  --pk-r-lg:    18px;
+  --pk-r-xl:    24px;
+  --pk-r-2xl:   32px;
+  --pk-r-pill:  999px;
+  /* CTAs and primary surfaces lean toward pill / 18-24px. Sharp cards = 4-8px. */
+
+  /* ----- Shadow / elevation (cool, dark, with neon haze on emphasis) ------ */
+  --pk-shadow-1: 0 1px 0 rgba(255,255,255,0.04) inset, 0 4px 12px rgba(0,0,0,0.50);
+  --pk-shadow-2: 0 1px 0 rgba(255,255,255,0.05) inset, 0 12px 32px rgba(0,0,0,0.65);
+  --pk-shadow-3: 0 1px 0 rgba(255,255,255,0.06) inset, 0 24px 64px rgba(0,0,0,0.75);
+  --pk-shadow-cue:  0 0 0 1px var(--pk-border-red), 0 0 24px rgba(108, 26, 26, 0.40); /* "active cue" — focus state */
+
+  /* ----- Motion ----------------------------------------------------------- */
+  --pk-ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --pk-ease-snap:   cubic-bezier(0.18, 0.89, 0.32, 1.28);   /* Slight overshoot — strike */
+  --pk-ease-quick:  cubic-bezier(0.4, 0, 0.2, 1);
+  --pk-d-fast:      120ms;
+  --pk-d-base:      220ms;
+  --pk-d-slow:      420ms;
+
+  /* ----- Backdrops -------------------------------------------------------- */
+  --pk-blur-glass:  saturate(140%) blur(18px);
+  --pk-vignette:    radial-gradient(120% 80% at 50% 0%, rgba(108,26,26,0.28), transparent 60%);
+}
+
+/* ==========================================================================
+   Semantic element styles — opt-in via .pk- container or apply directly.
+   ========================================================================== */
+
+.pk-root,
+.pk-root * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.pk-root {
+  background: var(--pk-ink);
+  color: var(--pk-fg-1);
+  font-family: var(--pk-font-text);
+  font-size: var(--pk-fs-base);
+  line-height: var(--pk-lh-body);
+  font-weight: var(--pk-w-regular);
+}
+
+

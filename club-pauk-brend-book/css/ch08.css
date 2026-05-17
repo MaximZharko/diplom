@@ -1,0 +1,153 @@
+/* ══════ css/ch08.css ══════ */
+/* =============================================================
+   КлубПаук — Глава 08 · Финал (экраны 79–80)
+   ============================================================= */
+
+/* ─── RESULTS (screen 79) ─── */
+.bb-results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 64px;
+}
+.bb-result {
+  background: var(--pk-coal);
+  border: 1px solid var(--pk-border-2);
+  border-radius: var(--pk-r-xl);
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: all var(--pk-d-base) var(--pk-ease-out);
+}
+.bb-result:hover {
+  border-color: var(--pk-border-red);
+  box-shadow: var(--pk-shadow-2), var(--pk-glow-red-sm);
+  transform: translateY(-2px);
+}
+.bb-result__num {
+  font-family: var(--pk-font-display);
+  font-weight: 400;
+  font-size: 48px;
+  color: var(--pk-blood-300);
+  line-height: 1;
+  letter-spacing: var(--pk-tr-display);
+}
+.bb-result h4 {
+  font-family: var(--pk-font-display);
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: var(--pk-tr-tight);
+  color: var(--pk-fg-1);
+}
+.bb-result p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.55; }
+
+/* sources accordion */
+.bb-sources { margin-top: 24px; }
+.bb-sources .bb-acc__body ul {
+  display: flex; flex-direction: column; gap: 6px;
+  color: var(--pk-fg-2); font-size: 14px;
+}
+.bb-sources .bb-acc__body li {
+  position: relative; padding-left: 16px; line-height: 1.5;
+}
+.bb-sources .bb-acc__body li::before {
+  content: '·'; position: absolute; left: 0; color: var(--pk-blood-300);
+}
+
+/* ─── CONTACTS / FINAL (screen 80) ─── */
+.bb-final {
+  text-align: center;
+  padding-bottom: clamp(120px, 16vh, 240px);
+}
+.bb-final__mark {
+  margin-bottom: 36px;
+  filter: drop-shadow(var(--pk-glow-red));
+}
+.bb-final__title {
+  font-family: var(--pk-font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 0.9;
+  letter-spacing: var(--pk-tr-display);
+  text-transform: uppercase;
+  color: var(--pk-fg-1);
+  text-shadow: 0 0 60px rgba(108,26,26,0.45);
+  margin-bottom: 28px;
+}
+.bb-final__sub {
+  font-family: var(--pk-font-mono);
+  font-size: 12px;
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pk-blood-300);
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 8px 18px;
+  border: 1px solid var(--pk-border-red);
+  border-radius: var(--pk-r-pill);
+  background: rgba(108,26,26,0.10);
+  margin-bottom: 48px;
+}
+
+.bb-final__info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto 56px;
+  text-align: left;
+}
+.bb-final__info > div {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 24px;
+  background: var(--pk-coal);
+  border: 1px solid var(--pk-border-2);
+  border-radius: var(--pk-r-lg);
+  transition: all var(--pk-d-base) var(--pk-ease-out);
+}
+.bb-final__info > div:hover {
+  border-color: var(--pk-border-red);
+  box-shadow: var(--pk-glow-red-sm);
+}
+.bb-final__info em {
+  font-style: normal;
+  font-family: var(--pk-font-mono);
+  font-size: 10px;
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pk-fg-4);
+}
+.bb-final__info b {
+  font-family: var(--pk-font-display);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: var(--pk-tr-tight);
+  text-transform: uppercase;
+  color: var(--pk-fg-1);
+}
+
+.bb-final__cta {
+  display: flex; gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.bb-final__copy {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pk-fg-2);
+  text-align: center;
+}
+.bb-final__copy b { color: var(--pk-fg-1); font-weight: 600; }
+
+/* ─── responsive ─── */
+@media (max-width: 768px) {
+  .bb-results__grid { grid-template-columns: 1fr; }
+  .bb-final__info { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .bb-final__info { grid-template-columns: 1fr; }
+}
+
