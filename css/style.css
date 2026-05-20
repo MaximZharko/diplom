@@ -1637,6 +1637,45 @@ main { padding-top: 70px; }
   font-size: 11px;
 }
 
+/* Nested groups (used inside the “Фирменный стиль” TOC card) */
+.bb-toc__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--pk-border-1);
+}
+.bb-toc__group h4 {
+  font-family: var(--pk-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pk-blood-300);
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+.bb-toc__group h4 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--pk-d-fast) var(--pk-ease-out);
+}
+.bb-toc__group h4 a:hover { color: var(--pk-fg-1); }
+.bb-toc__group .bb-toc__subs {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  gap: 5px;
+}
+
+/* Wide TOC card: middle column is 2× as wide on big screens to fit nested groups */
+@media (min-width: 1100px) {
+  .bb-toc__grid {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
 .bb-foot {
   display: flex; align-items: center; justify-content: space-between;
   gap: 32px;
