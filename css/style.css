@@ -669,6 +669,31 @@ main { padding-top: 70px; }
 .bb-brief__card { grid-column: span 4; }
 .bb-brief__card--wide { grid-column: span 8; }
 
+a.bb-brief__card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--pk-d-base) var(--pk-ease-out),
+              border-color var(--pk-d-base) var(--pk-ease-out),
+              box-shadow var(--pk-d-base) var(--pk-ease-out);
+}
+a.bb-brief__card:hover {
+  transform: translateY(-2px);
+  border-color: var(--pk-border-red);
+  box-shadow: var(--pk-glow-red-sm);
+}
+.bb-brief__cardlink {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-family: var(--pk-font-mono);
+  font-size: 18px;
+  color: var(--pk-blood-300);
+  transition: transform var(--pk-d-base) var(--pk-ease-out);
+}
+a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
+
 .bb-brief__finding {
   display: grid;
   grid-template-columns: minmax(220px, 320px) 1fr;
@@ -1683,6 +1708,97 @@ main { padding-top: 70px; }
   border-top: 1px solid var(--pk-border-1);
 }
 .bb-foot p { color: var(--pk-fg-2); font-size: 16px; margin-top: 8px; }
+
+/* =============================================================
+   MATERIAL GROUPS (Плакаты / Листовки / Вывеска / …) + MOCKUP PAGES
+   ============================================================= */
+.bb-mat-group {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 80px) clamp(24px, 3vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-margin-top: 90px;
+}
+.bb-mat-group .bb-eyebrow {
+  font-family: var(--pk-font-mono);
+  font-size: 11px;
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pk-blood-300);
+}
+.bb-mat-group__title {
+  font-family: var(--pk-font-display);
+  font-weight: 400;
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 0.92;
+  letter-spacing: var(--pk-tr-display);
+  text-transform: uppercase;
+  color: var(--pk-fg-1);
+}
+.bb-mat-group__rule {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg,
+              var(--pk-blood-300) 0%,
+              var(--pk-blood) 30%,
+              transparent 80%);
+  margin-top: 8px;
+}
+
+/* Mockup pages — реальный носитель в среде */
+.bb-mat--mockup {
+  padding-top: clamp(40px, 5vw, 64px);
+  padding-bottom: clamp(60px, 7vw, 100px);
+}
+.bb-mat--mockup .bb-eyebrow--red {
+  color: var(--pk-blood-300);
+}
+.bb-mat__mock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.bb-mat__mock img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--pk-r-lg);
+  box-shadow: var(--pk-shadow-2);
+  object-fit: cover;
+  background: var(--pk-coal);
+}
+.bb-mat__mock figcaption {
+  font-family: var(--pk-font-mono);
+  font-size: 11px;
+  color: var(--pk-fg-3);
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.bb-mat__mock-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--pk-r-pill);
+  background: var(--pk-blood);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: var(--pk-tr-eyebrow);
+  box-shadow: var(--pk-glow-red-sm);
+}
+
+@media (max-width: 720px) {
+  .bb-mat-group__title { font-size: clamp(40px, 12vw, 56px); }
+}
 
 /* =============================================================
    RESPONSIVE

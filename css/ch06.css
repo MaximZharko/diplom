@@ -228,6 +228,8 @@
 
 .bb-mat__specs .bb-btn { align-self: flex-start; }
 
+/* ─── Image-only modal (Посмотреть подробнее / Открыть мокап) ─── */
+
 /* ═════════════ MODAL — carrier ═════════════ */
 .bb-modal--mat .bb-modal__inner {
   display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
@@ -298,6 +300,44 @@
 }
 .bb-modal__close svg { width: 18px; height: 18px; }
 .bb-modal__close:hover { background: var(--pk-blood-700); transform: rotate(90deg); }
+
+/* ─── Image-only modal (Посмотреть подробнее / Открыть мокап) ─── */
+.bb-modal--mat.bb-modal--image .bb-modal__inner {
+  grid-template-columns: 1fr;
+  max-width: min(96vw, 1100px);
+  width: min(96vw, 1100px);
+  max-height: 92vh;
+}
+.bb-modal--mat.bb-modal--image .bb-modal__art {
+  max-width: none;
+  max-height: 92vh;
+  border-right: 0;
+  padding: clamp(16px, 2vw, 32px);
+  width: 100%;
+  height: auto;
+  min-height: 0;
+}
+.bb-modal--mat.bb-modal--image .bb-modal__art .bb-mat__media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  background: transparent;
+  border: 0;
+  position: static;
+  display: block;
+}
+.bb-modal--mat.bb-modal--image .bb-mat__photo {
+  position: static;
+  inset: auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(92vh - 80px);
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--pk-r-md);
+}
 
 /* ═════════════ 67–68 · GALLERY GRID ═════════════ */
 .bb-gal-sec { background: var(--pk-void); }

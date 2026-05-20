@@ -64,7 +64,7 @@
       <li><a href="index.html" aria-current="page"><i>01</i> Главная · содержание</a></li>
       <li><a href="page-2.html"><i>02</i> Введение</a></li>
       <li><a href="page-3.html"><i>03</i> Фирменный стиль</a></li>
-      <li><a href="page-4.html"><i>04</i> Применение и носители</a></li>
+      <li><a href="page-4.html"><i>04</i> Фирменные носители</a></li>
     </ol>
   </nav>
 
@@ -76,32 +76,40 @@
         <svg class="bb-cover__web" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
             <radialGradient id="webGlow" cx="50%" cy="50%" r="60%">
-              <stop offset="0%" stop-color="#A23636" stop-opacity="0.55"/>
+              <stop offset="0%" stop-color="#6C1A1A" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#6C1A1A" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#A23636" stop-opacity="0.22"/>
+              <stop offset="70%" stop-color="#A23636" stop-opacity="0.04"/>
               <stop offset="100%" stop-color="#A23636" stop-opacity="0"/>
             </radialGradient>
           </defs>
-          <g stroke="#6C1A1A" stroke-width="1" fill="none" opacity="0.55">
-            <line x1="800" y1="450" x2="0" y2="0"/>
-            <line x1="800" y1="450" x2="400" y2="0"/>
-            <line x1="800" y1="450" x2="800" y2="0"/>
-            <line x1="800" y1="450" x2="1200" y2="0"/>
-            <line x1="800" y1="450" x2="1600" y2="0"/>
-            <line x1="800" y1="450" x2="1600" y2="450"/>
-            <line x1="800" y1="450" x2="1600" y2="900"/>
-            <line x1="800" y1="450" x2="1200" y2="900"/>
-            <line x1="800" y1="450" x2="800" y2="900"/>
-            <line x1="800" y1="450" x2="400" y2="900"/>
-            <line x1="800" y1="450" x2="0" y2="900"/>
-            <line x1="800" y1="450" x2="0" y2="450"/>
+
+          <rect x="0" y="0" width="1600" height="900" fill="url(#webGlow)"/>
+
+          <g fill="none" stroke="#A23636" stroke-width="1.2" opacity="0.85">
+            <circle cx="540" cy="180" r="60"/>
+            <circle cx="540" cy="180" r="120"/>
+            <circle cx="540" cy="180" r="190"/>
+            <circle cx="540" cy="180" r="270"/>
           </g>
-          <g stroke="#A23636" stroke-width="0.6" fill="none" opacity="0.35">
-            <circle cx="800" cy="450" r="120"/>
-            <circle cx="800" cy="450" r="240"/>
-            <circle cx="800" cy="450" r="380"/>
-            <circle cx="800" cy="450" r="540"/>
-            <circle cx="800" cy="450" r="720"/>
+          <circle cx="540" cy="180" r="340" fill="url(#ringGlow)"/>
+
+          <g fill="none" stroke="#A23636" stroke-width="1.2" opacity="0.78">
+            <circle cx="60" cy="700" r="50"/>
+            <circle cx="60" cy="700" r="110"/>
+            <circle cx="60" cy="700" r="180"/>
+            <circle cx="60" cy="700" r="260"/>
           </g>
-          <circle cx="800" cy="450" r="900" fill="url(#webGlow)"/>
+
+          <g fill="none" stroke="#A23636" stroke-width="1.2" opacity="0.9">
+            <circle cx="1280" cy="720" r="70"/>
+            <circle cx="1280" cy="720" r="140"/>
+            <circle cx="1280" cy="720" r="215"/>
+            <circle cx="1280" cy="720" r="295"/>
+          </g>
+          <circle cx="1280" cy="720" r="360" fill="url(#ringGlow)"/>
         </svg>
       </div>
 
@@ -198,14 +206,17 @@
         <li class="bb-toc__item bb-toc__item--section reveal" style="--i:3">
           <div class="bb-toc__card">
             <span class="bb-toc__num">04</span>
-            <h3><a href="page-4.html">Применение и&nbsp;носители</a></h3>
-            <p>Фирменные носители, мокапы, итоги проекта.</p>
+            <h3><a href="page-4.html">Фирменные носители</a></h3>
+            <p>Носители по&nbsp;группам: плакаты, листовки, вывеска, полиграфия, digital, мерч. У&nbsp;каждого&nbsp;— страница в&nbsp;технических деталях и&nbsp;макет в&nbsp;среде.</p>
             <ul class="bb-toc__subs">
-              <li><a href="page-4.html#screen-49">Фирменные носители</a></li>
-              <li><a href="page-4.html#screen-70">Мокапы</a></li>
-              <li><a href="page-4.html#screen-79">Итоги проекта</a></li>
+              <li><a href="page-4.html#group-posters">Плакаты</a></li>
+              <li><a href="page-4.html#group-flyers">Листовки</a></li>
+              <li><a href="page-4.html#group-sign">Вывеска</a></li>
+              <li><a href="page-4.html#group-print">Полиграфия</a></li>
+              <li><a href="page-4.html#group-digital">Digital</a></li>
+              <li><a href="page-4.html#group-merch">Мерч</a></li>
             </ul>
-            <a href="page-4.html" class="bb-toc__arrow" aria-label="К разделу 04 — Применение и носители" aria-hidden="false">→</a>
+            <a href="page-4.html" class="bb-toc__arrow" aria-label="К разделу 04 — Фирменные носители" aria-hidden="false">→</a>
           </div>
         </li>
       </ol>

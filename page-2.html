@@ -64,7 +64,7 @@
       <li><a href="index.html"><i>01</i> Главная · содержание</a></li>
       <li><a href="page-2.html" aria-current="page"><i>02</i> Введение</a></li>
       <li><a href="page-3.html"><i>03</i> Фирменный стиль</a></li>
-      <li><a href="page-4.html"><i>04</i> Применение и носители</a></li>
+      <li><a href="page-4.html"><i>04</i> Фирменные носители</a></li>
     </ol>
   </nav>
 
@@ -90,18 +90,16 @@
           <p>Разработка фирменного стиля и интерактивного брендбука.</p>
         </article>
 
-        <article class="bb-card bb-brief__card reveal">
+        <a class="bb-card bb-brief__card bb-brief__card--link reveal" href="#screen-5">
           <header><span class="bb-card__num">03</span><h3>Целевая аудитория</h3></header>
           <p>Городские жители <b>20–30 лет</b>. Ценят атмосферу, дружескую конкуренцию и активный отдых.</p>
-        </article>
+          <span class="bb-brief__cardlink" aria-hidden="true">→</span>
+        </a>
 
         <article class="bb-card bb-brief__card reveal">
-          <header><span class="bb-card__num">04</span><h3>Услуги клуба</h3></header>
-          <ul class="bb-list">
-            <li>Игра в бильярд</li>
-            <li>Игра в настольный теннис</li>
-            <li>Турниры и рейтинговая система</li>
-            <li>Корпоративные и частные мероприятия</li>
+          <header><span class="bb-card__num">04</span><h3>Тональность</h3></header>
+          <ul class="bb-tags">
+            <li>Современный</li><li>Выразительный</li><li>Энергичный</li><li>Городской</li><li>Соревновательный</li>
           </ul>
         </article>
 
@@ -121,9 +119,12 @@
         </article>
 
         <article class="bb-card bb-brief__card reveal">
-          <header><span class="bb-card__num">07</span><h3>Тональность</h3></header>
-          <ul class="bb-tags">
-            <li>Современный</li><li>Выразительный</li><li>Энергичный</li><li>Городской</li><li>Соревновательный</li>
+          <header><span class="bb-card__num">07</span><h3>Услуги клуба</h3></header>
+          <ul class="bb-list">
+            <li>Игра в бильярд</li>
+            <li>Игра в настольный теннис</li>
+            <li>Турниры и рейтинговая система</li>
+            <li>Корпоративные и частные мероприятия</li>
           </ul>
         </article>
       </div>
@@ -148,6 +149,9 @@
         </button>
         <button class="bb-tab" role="tab" aria-selected="false" aria-controls="aud-panel-2" id="aud-tab-2" data-tab="2" tabindex="-1">
           <em>02</em><span>Анастасия</span>
+        </button>
+        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="aud-panel-3" id="aud-tab-3" data-tab="3" tabindex="-1">
+          <em>03</em><span>Дмитрий</span>
         </button>
       </div>
 
@@ -221,6 +225,44 @@
                 <li>«Мужские» заведения, где некомфортно прийти компанией</li>
                 <li>Скучный интерьер без визуального характера</li>
                 <li>Отсутствие уникальной атмосферы, которая выделяет место среди других</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-tabpanel" id="aud-panel-3" role="tabpanel" aria-labelledby="aud-tab-3" tabindex="0" hidden>
+        <div class="bb-persona">
+          <aside class="bb-persona__card">
+            <div class="bb-persona__avatar" aria-hidden="true">
+              <img src="assets/audience-avatar-1.png" alt="Дмитрий, 32" loading="lazy">
+              <i class="bb-persona__halo"></i>
+            </div>
+            <h3>Дмитрий, 32</h3>
+            <p class="bb-persona__role">Предприниматель · приходит за игрой и рейтингом</p>
+            <dl>
+              <div><dt>Занятость</dt><dd>малый бизнес</dd></div>
+              <div><dt>Образ жизни</dt><dd>деловой, спортивный</dd></div>
+              <div><dt>Сценарий</dt><dd>встречи, турниры</dd></div>
+              <div><dt>Мотивация</dt><dd>статус, прогресс, рейтинг</dd></div>
+            </dl>
+          </aside>
+          <div class="bb-persona__body">
+            <div class="bb-persona__col">
+              <h4>Что ценит</h4>
+              <ul class="bb-list">
+                <li>Серьезный уровень игры — качественные столы и инвентарь</li>
+                <li>Рейтинговую систему и турниры с понятным прогрессом</li>
+                <li>Закрытую клубную атмосферу для деловых встреч</li>
+                <li>Сервис: бронирование стола, тренер, удобная клубная карта</li>
+              </ul>
+            </div>
+            <div class="bb-persona__col">
+              <h4>Боли</h4>
+              <ul class="bb-list bb-list--neg">
+                <li>Шумные «барные» площадки без фокуса на игре</li>
+                <li>Случайные посетители вместо постоянного сообщества</li>
+                <li>Отсутствие системы рейтинга — нечего отслеживать и не за что бороться</li>
               </ul>
             </div>
           </div>

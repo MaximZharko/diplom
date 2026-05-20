@@ -64,7 +64,7 @@
       <li><a href="index.html"><i>01</i> Главная · содержание</a></li>
       <li><a href="page-2.html"><i>02</i> Введение</a></li>
       <li><a href="page-3.html" aria-current="page"><i>03</i> Фирменный стиль</a></li>
-      <li><a href="page-4.html"><i>04</i> Применение и носители</a></li>
+      <li><a href="page-4.html"><i>04</i> Фирменные носители</a></li>
     </ol>
   </nav>
 
@@ -135,32 +135,18 @@
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Логотип</span>
         <h2 id="col-h" class="bb-h">Цветовые<br><em>версии</em></h2>
-        <p class="bb-lede">Четыре утвержденные цветовые версии знака: основная для темного фона, инверсная для светлого фона, монохром-красный для одного-цветной печати и черно-белая для технических задач.</p>
+        <p class="bb-lede">Две утвержденные цветовые версии знака: основная для темного фона и черно-белая для технических задач.</p>
       </header>
 
       <div class="bb-tabs bb-tabs--color reveal" role="tablist" aria-label="Цветовые версии логотипа">
         <button class="bb-tab is-active" role="tab" aria-selected="true" aria-controls="col-panel-1" id="col-tab-1" data-tab="1"><em>01</em><span>Основная</span></button>
-        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="col-panel-2" id="col-tab-2" data-tab="2" tabindex="-1"><em>02</em><span>Инверсная</span></button>
-        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="col-panel-3" id="col-tab-3" data-tab="3" tabindex="-1"><em>03</em><span>Монохром</span></button>
-        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="col-panel-4" id="col-tab-4" data-tab="4" tabindex="-1"><em>04</em><span>Ч/Б</span></button>
+        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="col-panel-4" id="col-tab-4" data-tab="2" tabindex="-1"><em>02</em><span>Ч/Б</span></button>
       </div>
 
       <div class="bb-tabpanel is-active" id="col-panel-1" role="tabpanel" aria-labelledby="col-tab-1" tabindex="0">
         <div class="bb-colorset__panel">
           <figure class="bb-colorset__plate bb-colorset__plate--dark"><img src="assets/logo-original.png" alt="Основная версия логотипа на темном фоне." loading="lazy"></figure>
           <dl class="bb-colorset__spec"><div><dt>Фон</dt><dd>#0E0D0D</dd></div><div><dt>Знак</dt><dd>White + #6C1A1A акцент</dd></div><div><dt>Применение</dt><dd>Все основные носители, digital, интерьер</dd></div><div><dt>Приоритет</dt><dd>Первичная версия</dd></div></dl>
-        </div>
-      </div>
-      <div class="bb-tabpanel" id="col-panel-2" role="tabpanel" aria-labelledby="col-tab-2" tabindex="0" hidden>
-        <div class="bb-colorset__panel">
-          <figure class="bb-colorset__plate bb-colorset__plate--light"><img src="assets/logo-original.png" alt="Инверсная версия логотипа на светлом фоне." class="bb-colorset__inv" loading="lazy"></figure>
-          <dl class="bb-colorset__spec"><div><dt>Фон</dt><dd>#F3F3F3 / Bone</dd></div><div><dt>Знак</dt><dd>#0E0D0D + #6C1A1A акцент</dd></div><div><dt>Применение</dt><dd>Печать на светлой бумаге, мерч на белом</dd></div><div><dt>Приоритет</dt><dd>Альтернативная</dd></div></dl>
-        </div>
-      </div>
-      <div class="bb-tabpanel" id="col-panel-3" role="tabpanel" aria-labelledby="col-tab-3" tabindex="0" hidden>
-        <div class="bb-colorset__panel">
-          <figure class="bb-colorset__plate bb-colorset__plate--mono"><img src="assets/logo-original.png" alt="Монохромная красная версия логотипа." class="bb-colorset__mono" loading="lazy"></figure>
-          <dl class="bb-colorset__spec"><div><dt>Фон</dt><dd>любой нейтральный</dd></div><div><dt>Знак</dt><dd>#6C1A1A целиком</dd></div><div><dt>Применение</dt><dd>Один-цветная печать, тиснение, шелкография</dd></div><div><dt>Приоритет</dt><dd>Технологическая</dd></div></dl>
         </div>
       </div>
       <div class="bb-tabpanel" id="col-panel-4" role="tabpanel" aria-labelledby="col-tab-4" tabindex="0" hidden>
@@ -182,6 +168,7 @@
       <div class="bb-tabs bb-tabs--bg reveal" role="tablist" aria-label="Тип фона">
         <button class="bb-tab is-active" role="tab" aria-selected="true" aria-controls="bg-panel-1" id="bg-tab-1" data-tab="1"><em>01</em><span>Темный фон</span></button>
         <button class="bb-tab" role="tab" aria-selected="false" aria-controls="bg-panel-2" id="bg-tab-2" data-tab="2" tabindex="-1"><em>02</em><span>Светлый фон</span></button>
+        <button class="bb-tab" role="tab" aria-selected="false" aria-controls="bg-panel-3" id="bg-tab-3" data-tab="3" tabindex="-1"><em>03</em><span>В среде</span></button>
       </div>
 
       <div class="bb-tabpanel is-active" id="bg-panel-1" role="tabpanel" aria-labelledby="bg-tab-1" tabindex="0">
@@ -190,13 +177,16 @@
       <div class="bb-tabpanel" id="bg-panel-2" role="tabpanel" aria-labelledby="bg-tab-2" tabindex="0" hidden>
         <div class="bb-bg__panel bb-bg__panel--light"><figure class="bb-bg__plate bb-bg__plate--light"><img src="assets/logo-original.png" alt="Логотип на светлом фоне." class="bb-colorset__inv" loading="lazy"></figure><div class="bb-bg__note"><h3>Светлый фон · альтернатива</h3><p>Используется инверсная версия. Знак в основном цвете, акцент — красный #6C1A1A.</p></div></div>
       </div>
+      <div class="bb-tabpanel" id="bg-panel-3" role="tabpanel" aria-labelledby="bg-tab-3" tabindex="0" hidden>
+        <div class="bb-bg__panel bb-bg__panel--env"><figure class="bb-bg__plate bb-bg__plate--env" style="background-image:url('assets/moodboard-red.jpg');"><img src="assets/logo-original.png" alt="Логотип на фоне фирменной среды." loading="lazy"></figure><div class="bb-bg__note"><h3>В среде · фирменная сцена</h3><p>Знак размещается поверх фирменной среды — красное сукно, неон, ночной интерьер. Под логотипом — однородный участок с затемнением, контраст к знаку не ниже 4,5:1.</p></div></div>
+      </div>
     </section>
 
     <!-- ═════════════════════ 19 · WITH / WITHOUT TYPEBLOCK ═════════════════════ -->
-    <section id="screen-19" class="bb-screen bb-typeblock" data-screen-label="14 Со шрифтовым блоком" aria-labelledby="tb-h">
+    <section id="screen-19" class="bb-screen bb-typeblock" data-screen-label="14 Версии логотипа" aria-labelledby="tb-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Логотип</span>
-        <h2 id="tb-h" class="bb-h">Со шрифтовым<br><em>блоком и&nbsp;без</em></h2>
+        <h2 id="tb-h" class="bb-h">Версии<br><em>логотипа</em></h2>
         <p class="bb-lede">Логотип имеет два режима: полный лок-ап (знак + название + дескриптор) и иконка-знак без надписи. Иконка применяется только там, где бренд уже считывается из контекста.</p>
       </header>
 
@@ -283,11 +273,27 @@
       </div>
     </section>
 
+    <!-- ═════════════════════ SECTION OPENER · ЦВЕТА ═════════════════════ -->
+    <section class="bb-section-opener" data-screen-label="Раздел · Цвета" aria-hidden="false">
+      <div class="bb-section-opener__inner reveal">
+        <span class="bb-eyebrow">Фирменный стиль</span>
+        <h2 class="bb-section-opener__title">Цвета</h2>
+        <p class="bb-section-opener__lede">Основные цвета, дополнительные акценты, нейтральная шкала и психология цвета — четыре подраздела, описывающие палитру бренда.</p>
+        <ul class="bb-section-opener__list">
+          <li>Основные цвета</li>
+          <li>Дополнительные акценты</li>
+          <li>Нейтральная шкала</li>
+          <li>Психология цвета</li>
+        </ul>
+        <span class="bb-section-opener__rule" aria-hidden="true"></span>
+      </div>
+    </section>
+
     <!-- ═════════════════════ 23 · CORE COLORS ═════════════════════ -->
-    <section id="screen-23" class="bb-screen bb-pal" data-screen-label="17 Основные цвета" aria-labelledby="pal-core-h">
+    <section id="screen-23" class="bb-screen bb-pal bb-pal--sub" data-screen-label="17 Основные цвета" aria-labelledby="pal-core-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Палитра</span>
-        <h2 id="pal-core-h" class="bb-h">Основные<br><em>цвета</em></h2>
+        <h2 id="pal-core-h" class="bb-h bb-h--sub">Основные<br><em>цвета</em></h2>
         <p class="bb-lede">Три базовых цвета — фундамент идентификации. Кровавый красный задает характер, угольный черный держит сцену, костяной белый отвечает за&nbsp;ясность.</p>
       </header>
 
@@ -334,10 +340,10 @@
     </section>
 
     <!-- ═════════════════════ 24 · ACCENTS ═════════════════════ -->
-    <section id="screen-24" class="bb-screen bb-pal" data-screen-label="18 Дополнительные акценты" aria-labelledby="pal-acc-h">
+    <section id="screen-24" class="bb-screen bb-pal bb-pal--sub" data-screen-label="18 Дополнительные акценты" aria-labelledby="pal-acc-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Палитра</span>
-        <h2 id="pal-acc-h" class="bb-h">Дополнительные<br><em>акценты</em></h2>
+        <h2 id="pal-acc-h" class="bb-h bb-h--sub">Дополнительные<br><em>акценты</em></h2>
         <p class="bb-lede">Расширяют красный по&nbsp;шкале — от&nbsp;сукна стола до&nbsp;неоновой подсветки лампы. Используются дозированно: не&nbsp;более одного акцента на&nbsp;экран.</p>
       </header>
 
@@ -368,10 +374,10 @@
     </section>
 
     <!-- ═════════════════════ 25 · NEUTRALS ═════════════════════ -->
-    <section id="screen-25" class="bb-screen bb-pal" data-screen-label="19 Нейтральные" aria-labelledby="pal-neu-h">
+    <section id="screen-25" class="bb-screen bb-pal bb-pal--sub" data-screen-label="19 Нейтральные" aria-labelledby="pal-neu-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Палитра</span>
-        <h2 id="pal-neu-h" class="bb-h">Нейтральная<br><em>шкала</em></h2>
+        <h2 id="pal-neu-h" class="bb-h bb-h--sub">Нейтральная<br><em>шкала</em></h2>
         <p class="bb-lede">Четыре оттенка от&nbsp;абсолютного черного до&nbsp;теплого костяного. Карточки, панели, разделители.</p>
       </header>
 
@@ -408,10 +414,10 @@
     </section>
 
     <!-- ═════════════════════ 31 · PSYCHOLOGY ═════════════════════ -->
-    <section id="screen-31" class="bb-screen" data-screen-label="20 Психология цвета" aria-labelledby="pal-psy-h">
+    <section id="screen-31" class="bb-screen bb-pal--sub" data-screen-label="20 Психология цвета" aria-labelledby="pal-psy-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Палитра</span>
-        <h2 id="pal-psy-h" class="bb-h">Психология<br><em>цвета</em></h2>
+        <h2 id="pal-psy-h" class="bb-h bb-h--sub">Психология<br><em>цвета</em></h2>
         <p class="bb-lede">Зачем именно эти оттенки. Каждый цвет работает на&nbsp;ценности бренда — открытость, коммуникация, клубная атмосфера, развитие, комфорт.</p>
       </header>
 
@@ -589,36 +595,26 @@
       </div>
     </section>
 
-    <!-- ═════════════════════ 30 · MOCKUPS ═════════════════════ -->
-    <section id="screen-30" class="bb-screen" data-screen-label="24 Цвет на носителях" aria-labelledby="pal-mock-h">
-      <header class="bb-screen__head reveal">
-        <span class="bb-eyebrow">Палитра</span>
-        <h2 id="pal-mock-h" class="bb-h">Цвет<br><em>на&nbsp;носителях</em></h2>
-        <p class="bb-lede">Палитра в&nbsp;деле: клубная карта и&nbsp;афиша.</p>
-      </header>
-
-      <div class="bb-mock__grid reveal">
-        <figure class="bb-mock">
-          <div class="bb-mock__plate bb-mock__plate--card">
-            <img src="assets/club-card.png" alt="Клубная карта КлубПаук" loading="lazy" style="width:100%;border-radius:var(--pk-r-lg);">
-          </div>
-          <figcaption class="bb-mock__cap"><h4>Клубная карта</h4></figcaption>
-        </figure>
-
-        <figure class="bb-mock">
-          <div class="bb-mock__plate bb-mock__plate--banner">
-            <img src="assets/POSTER.png" alt="Плакат КлубПаук" loading="lazy" style="width:100%;border-radius:var(--pk-r-lg);">
-          </div>
-          <figcaption class="bb-mock__cap"><h4>Афиша</h4></figcaption>
-        </figure>
+    <!-- ═════════════════════ SECTION OPENER · ТИПОГРАФИКА ═════════════════════ -->
+    <section class="bb-section-opener bb-section-opener--type" data-screen-label="Раздел · Типография" aria-hidden="false">
+      <div class="bb-section-opener__inner reveal">
+        <span class="bb-eyebrow">Фирменный стиль</span>
+        <h2 class="bb-section-opener__title">Типография</h2>
+        <p class="bb-section-opener__lede">Главный раздел брендбука: основная гарнитура задает характер бренда, дополнительная — несет интерфейс и тексты, пара шрифтов работает на всех носителях.</p>
+        <ul class="bb-section-opener__list">
+          <li>Основная гарнитура</li>
+          <li>Дополнительная гарнитура</li>
+          <li>Пример применения</li>
+        </ul>
+        <span class="bb-section-opener__rule" aria-hidden="true"></span>
       </div>
     </section>
 
     <!-- ═════════════════════ 32 · PRIMARY TYPEFACE · ZEN DOTS ═════════════════════ -->
-    <section id="screen-32" class="bb-screen bb-type" data-screen-label="25 Основная гарнитура" aria-labelledby="type-pri-h">
+    <section id="screen-32" class="bb-screen bb-type bb-type--sub" data-screen-label="25 Основная гарнитура" aria-labelledby="type-pri-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Типографика</span>
-        <h2 id="type-pri-h" class="bb-h">Основная<br><em>гарнитура</em></h2>
+        <h2 id="type-pri-h" class="bb-h bb-h--sub">Основная<br><em>гарнитура</em></h2>
         <p class="bb-lede">Zen&nbsp;Dots&nbsp;— геометрический дисплейный шрифт. Читается как&nbsp;ритм точек на&nbsp;табло счета. Используется для&nbsp;hero, заголовков, плакатов.</p>
       </header>
 
@@ -648,10 +644,10 @@
     </section>
 
     <!-- ═════════════════════ 33 · SECONDARY TYPEFACES ═════════════════════ -->
-    <section id="screen-33" class="bb-screen bb-type" data-screen-label="26 Дополнительные гарнитуры" aria-labelledby="type-sec-h">
+    <section id="screen-33" class="bb-screen bb-type bb-type--sub" data-screen-label="26 Дополнительные гарнитуры" aria-labelledby="type-sec-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Типографика</span>
-        <h2 id="type-sec-h" class="bb-h">Дополнительные<br><em>гарнитуры</em></h2>
+        <h2 id="type-sec-h" class="bb-h bb-h--sub">Дополнительные<br><em>гарнитуры</em></h2>
         <p class="bb-lede">Manrope несет&nbsp;всю основную нагрузку текста и&nbsp;интерфейса. Для&nbsp;цифровых данных используется системный моноширинный шрифт.</p>
       </header>
 
@@ -680,11 +676,11 @@
     </section>
 
     <!-- ═════════════════════ 34 · TYPE PAIRING ═════════════════════ -->
-    <section id="screen-34" class="bb-screen" data-screen-label="27 Шрифтовая пара" aria-labelledby="type-pair-h">
+    <section id="screen-34" class="bb-screen bb-type--sub" data-screen-label="27 Пример применения" aria-labelledby="type-pair-h">
       <header class="bb-screen__head reveal">
         <span class="bb-eyebrow">Типографика</span>
-        <h2 id="type-pair-h" class="bb-h">Шрифтовая<br><em>пара</em></h2>
-        <p class="bb-lede">Zen&nbsp;Dots + Manrope. Геометричный дисплей и&nbsp;нейтральный гротеск. Контраст характера, согласованность пропорций.</p>
+        <h2 id="type-pair-h" class="bb-h bb-h--sub">Пример<br><em>применения</em></h2>
+        <p class="bb-lede">Zen&nbsp;Dots + Manrope в&nbsp;связке. Геометричный дисплей и&nbsp;нейтральный гротеск: контраст характера, согласованность пропорций.</p>
       </header>
 
       <div class="bb-pair reveal">
