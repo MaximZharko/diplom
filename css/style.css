@@ -183,6 +183,84 @@ img { display: block; max-width: 100%; }
   text-decoration: none;
 }
 
+/* =============================================================
+   PAGE TABS NAV (multi-page switcher in КлубПаук style)
+   ============================================================= */
+.bb-pagenav {
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  padding: 0 6px;
+}
+.bb-pagenav::-webkit-scrollbar { display: none; }
+
+.bb-pagenav__tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--pk-r-pill);
+  border: 1px solid var(--pk-border-2);
+  background: rgba(255, 255, 255, 0.015);
+  white-space: nowrap;
+  font-family: var(--pk-font-mono);
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: var(--pk-tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--pk-fg-3);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color var(--pk-d-base) var(--pk-ease-out),
+              border-color var(--pk-d-base) var(--pk-ease-out),
+              background var(--pk-d-base) var(--pk-ease-out),
+              box-shadow var(--pk-d-base) var(--pk-ease-out),
+              transform var(--pk-d-base) var(--pk-ease-out);
+}
+.bb-pagenav__tab i {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--pk-fg-4);
+  letter-spacing: 0;
+  transition: color var(--pk-d-base) var(--pk-ease-out);
+}
+.bb-pagenav__tab span {
+  font-weight: 500;
+}
+.bb-pagenav__tab:hover {
+  color: var(--pk-fg-1);
+  border-color: var(--pk-blood-300);
+  background: rgba(108, 26, 26, 0.08);
+  transform: translateY(-1px);
+}
+.bb-pagenav__tab:hover i { color: var(--pk-blood-300); }
+.bb-pagenav__tab.is-active {
+  color: #fff;
+  background: linear-gradient(180deg, var(--pk-blood-400, #A23636), var(--pk-blood, #6C1A1A));
+  border-color: var(--pk-blood-400, #A23636);
+  box-shadow: var(--pk-glow-red-sm), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.bb-pagenav__tab.is-active i { color: rgba(255, 255, 255, 0.7); }
+.bb-pagenav__tab.is-active:hover { transform: none; }
+
+@media (max-width: 980px) {
+  .bb-pagenav { gap: 4px; padding: 0 4px; }
+  .bb-pagenav__tab { padding: 7px 12px; font-size: 10px; gap: 6px; }
+  .bb-pagenav__tab i { font-size: 9px; }
+}
+@media (max-width: 720px) {
+  .bb-pagenav { display: none; }
+}
+
 
 
 .bb-nav__meta { display: flex; gap: 18px; align-items: center; }
