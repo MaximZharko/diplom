@@ -1,9 +1,5 @@
-/* ══════ css/ch07.css ══════ */
-/* =============================================================
-   КлубПаук — Глава 07 · Примеры применения (экраны 70–78)
-   ============================================================= */
 
-/* ─── MOCKUP IN CONTEXT (screens 70–71) ─── */
+
 .bb-mockup__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -60,7 +56,6 @@
 }
 .bb-mockup--full { grid-column: span 2; aspect-ratio: 21 / 9; }
 
-/* ─── STAFF UNIFORM (screen 72) ─── */
 .bb-uniform__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -102,7 +97,6 @@
 }
 .bb-uniform p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
 
-/* ─── INVENTORY (screen 73) ─── */
 .bb-inv__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -152,14 +146,13 @@
 .bb-inv__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-inv__spec {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
   margin-top: auto;
 }
 
-/* ─── DIGITAL (screen 74) ─── */
 .bb-digi__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -205,9 +198,8 @@
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-digi__body p { font-size: 13px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-digi__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
 
-/* ─── ALL TOGETHER (screen 75) ─── */
 .bb-all__scene {
   position: relative;
   border-radius: var(--pk-r-2xl);
@@ -246,13 +238,12 @@
 .bb-all__item--wide { grid-column: span 2; }
 .bb-all__item span {
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
 }
 
-/* ─── MOOD COLLAGE (screen 76) ─── */
 .bb-mood__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -287,7 +278,7 @@
   padding: 12px 16px;
   background: linear-gradient(transparent, rgba(10,8,8,0.8));
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -296,7 +287,6 @@
 }
 .bb-mood:hover .bb-mood__lbl { opacity: 1; }
 
-/* ─── MOTION (screen 77) ─── */
 .bb-motion__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -329,14 +319,13 @@
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-motion p { font-size: 13px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-motion p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-motion code {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--pk-fg-3);
 }
 
-/* motion demo animations */
 .bb-motion__ball {
   width: 32px; height: 32px;
   border-radius: 50%;
@@ -360,7 +349,6 @@
   50% { transform: translateX(50px); }
 }
 
-/* ─── SEASONS (screen 78) ─── */
 .bb-season__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -396,10 +384,10 @@
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-season__body p { font-size: 13px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-season__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-season__tag {
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -409,7 +397,6 @@
   width: fit-content;
 }
 
-/* ─── responsive ─── */
 @media (max-width: 1024px) {
   .bb-mockup__grid { grid-template-columns: 1fr; }
   .bb-mockup--full { grid-column: span 1; }

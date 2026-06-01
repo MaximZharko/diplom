@@ -1,5 +1,4 @@
-/* ══════ css/ch06.css ══════ */
-/* КлубПаук — Глава 06 · Фирменные носители */
+
 
 .bb-chap-opener--06 {
   background:
@@ -8,7 +7,6 @@
     var(--pk-void);
 }
 
-/* ───── 47 · INTRO / WHY THESE CARRIERS ───── */
 .bb-mat-intro { background: var(--pk-void); }
 .bb-mat-why__grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
@@ -20,7 +18,7 @@
 }
 .bb-mat-why { background: var(--pk-coal); padding: 32px 28px 28px; }
 .bb-mat-why__num {
-  font-family: var(--pk-font-mono); font-size: 11px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
   color: var(--pk-blood-300); display: inline-block; margin-bottom: 14px;
 }
 .bb-mat-why h3 {
@@ -32,7 +30,7 @@
 .bb-mat-why p b { color: var(--pk-snow); font-weight: 600; }
 .bb-mat-why ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--pk-border-1); padding-top: 14px; }
 .bb-mat-why li {
-  font-family: var(--pk-font-mono); font-size: 12px; letter-spacing: 0.04em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.04em;
   color: var(--pk-fg-2); padding: 6px 0;
   border-bottom: 1px dashed rgba(243,243,243,0.06);
 }
@@ -47,7 +45,6 @@
 .bb-mat-intro__foot b { color: var(--pk-snow); font-weight: 600; }
 .bb-mat-intro__foot em { color: var(--pk-blood-300); font-style: normal; }
 
-/* ───── 48 · PLACEMENT RULES ───── */
 .bb-mat-rules { background: var(--pk-coal); }
 .bb-mat-rules__grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
@@ -64,20 +61,19 @@
 .bb-mat-rule:hover { border-color: var(--pk-blood-700); transform: translateY(-2px); }
 .bb-mat-rule__n {
   display: inline-block;
-  font-family: var(--pk-font-mono); font-size: 11px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
   color: var(--pk-blood-300); margin-bottom: 12px;
 }
 .bb-mat-rule h4 {
   font-family: var(--pk-font-display); font-weight: 400; font-size: 18px;
   letter-spacing: -0.3px; color: var(--pk-snow); margin: 0 0 8px; line-height: 1.2;
 }
-.bb-mat-rule p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--pk-fg-2); }
+.bb-mat-rule p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--pk-fg-2); }
 .bb-mat-rule code {
   background: var(--pk-graphite); padding: 1px 6px; border-radius: 3px;
-  font-family: var(--pk-font-mono); font-size: 12px; color: var(--pk-blood-300);
+  font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-blood-300);
 }
 
-/* ═════════════ CARRIER SCREEN — shared ═════════════ */
 .bb-mat { background: var(--pk-void); }
 .bb-mat:nth-of-type(2n) { background: var(--pk-coal); }
 
@@ -89,7 +85,6 @@
   align-items: stretch;
 }
 
-/* Frame (clickable preview) */
 .bb-mat__frame {
   appearance: none; border: 0; padding: 0;
   background: transparent; color: inherit;
@@ -109,7 +104,6 @@
   overflow: hidden;
 }
 
-/* Aspect ratio modifiers */
 .bb-mat__frame--card     { aspect-ratio: 85 / 55; }
 .bb-mat__frame--card-w   { aspect-ratio: 200 / 100; }
 .bb-mat__frame--a2       { aspect-ratio: 420 / 594; }
@@ -119,7 +113,6 @@
 .bb-mat__frame--square   { aspect-ratio: 1 / 1; }
 .bb-mat__frame--cap      { aspect-ratio: 4 / 3; }
 
-/* Placeholder */
 .bb-mat__ph {
   position: absolute; inset: 0;
   display: flex; flex-direction: column;
@@ -144,21 +137,20 @@
 .bb-mat__ph-icon { color: var(--pk-blood-300); margin-bottom: 8px; }
 .bb-mat__ph-icon svg { width: 36px; height: 36px; display: block; }
 .bb-mat__ph-name {
-  font-family: var(--pk-font-mono); font-size: 11px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
   color: var(--pk-snow); text-transform: uppercase;
 }
 .bb-mat__ph-dims {
-  font-family: var(--pk-font-mono); font-size: 10px; letter-spacing: 0.12em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.12em;
   color: var(--pk-fg-3);
 }
 .bb-mat__ph-hint {
-  font-family: var(--pk-font-mono); font-size: 9px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--pk-blood-300);
   margin-top: 6px; padding: 3px 8px;
   border: 1px solid rgba(162,54,54,0.4); border-radius: 999px;
 }
 
-/* Replacement: when user drops in a real <img class="bb-mat__photo" loading="lazy"> inside .bb-mat__media */
 .bb-mat__photo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
@@ -167,7 +159,69 @@
 }
 .bb-modal--mat .bb-mat__photo { object-fit: contain; }
 
-/* Zoom hint */
+.bb-mat__slider { position: relative; display: block; }
+.bb-mat__slider .bb-mat__photo {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s var(--pk-ease);
+  z-index: 1;
+}
+.bb-mat__slider .bb-mat__photo.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+.bb-mat__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 5;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  background: rgba(14,13,13,0.7);
+  border: 1px solid var(--pk-border-1);
+  border-radius: 999px;
+  color: var(--pk-snow);
+  font-family: var(--pk-font-display);
+  font-size: 26px; line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background .25s var(--pk-ease), transform .25s var(--pk-ease), border-color .25s var(--pk-ease);
+}
+.bb-mat__nav:hover {
+  background: var(--pk-blood-700);
+  border-color: var(--pk-blood-700);
+  transform: translateY(-50%) scale(1.06);
+}
+.bb-mat__nav:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--pk-blood-700);
+}
+.bb-mat__nav--prev { left: 14px; }
+.bb-mat__nav--next { right: 14px; }
+.bb-mat__dots {
+  position: absolute; left: 50%; bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: inline-flex; gap: 8px;
+  padding: 6px 10px;
+  background: rgba(14,13,13,0.55);
+  border: 1px solid var(--pk-border-1);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+.bb-mat__dot {
+  appearance: none; border: 0; padding: 0;
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: rgba(243,243,243,0.35);
+  cursor: pointer;
+  transition: background .25s var(--pk-ease), transform .25s var(--pk-ease);
+}
+.bb-mat__dot:hover { background: rgba(243,243,243,0.6); }
+.bb-mat__dot.is-active {
+  background: var(--pk-snow);
+  transform: scale(1.2);
+}
+
 .bb-mat__zoom {
   position: absolute; top: 14px; right: 14px;
   width: 36px; height: 36px;
@@ -187,7 +241,6 @@
   transform: scale(1.06);
 }
 
-/* Specs panel */
 .bb-mat__specs {
   background: var(--pk-coal);
   border: 1px solid var(--pk-border-1);
@@ -208,18 +261,18 @@
 }
 .bb-mat__dl > div:last-child { border-bottom: 1px solid var(--pk-border-1); }
 .bb-mat__dl dt {
-  font-family: var(--pk-font-mono); font-size: 10px; letter-spacing: 0.16em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--pk-fg-3);
   padding-top: 2px;
 }
 .bb-mat__dl dd {
-  margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--pk-snow);
+  margin: 0; font-size: 14px; line-height: 1.5; color: var(--pk-snow);
   font-feature-settings: "tnum";
 }
 
 .bb-mat__note {
   margin: 4px 0 6px;
-  font-size: 13px; line-height: 1.55; color: var(--pk-fg-2);
+  font-size: 14px; line-height: 1.55; color: var(--pk-fg-2);
   padding: 12px 14px;
   border-left: 2px solid var(--pk-blood-700);
   background: rgba(108,26,26,0.08);
@@ -228,9 +281,6 @@
 
 .bb-mat__specs .bb-btn { align-self: flex-start; }
 
-/* ─── Image-only modal (Посмотреть подробнее / Открыть мокап) ─── */
-
-/* ═════════════ MODAL — carrier ═════════════ */
 .bb-modal--mat .bb-modal__inner {
   display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: 0; padding: 0; max-width: min(96vw, 1280px); width: min(96vw, 1280px);
@@ -282,7 +332,7 @@
 }
 .bb-modal--mat .bb-modal__lede code {
   background: var(--pk-graphite); padding: 1px 5px; border-radius: 3px;
-  font-family: var(--pk-font-mono); font-size: 12px; color: var(--pk-blood-300);
+  font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-blood-300);
 }
 .bb-modal--mat .bb-mat__dl--lg > div { grid-template-columns: 150px 1fr; }
 
@@ -301,12 +351,23 @@
 .bb-modal__close svg { width: 18px; height: 18px; }
 .bb-modal__close:hover { background: var(--pk-blood-700); transform: rotate(90deg); }
 
-/* ─── Image-only modal (Посмотреть подробнее / Открыть мокап) ─── */
 .bb-modal--mat.bb-modal--image .bb-modal__inner {
   grid-template-columns: 1fr;
   max-width: min(96vw, 1100px);
   width: min(96vw, 1100px);
   max-height: 92vh;
+}
+.bb-modal__caption {
+  font-family: var(--pk-font-display); font-weight: 400;
+  font-size: clamp(20px, 2vw, 28px);
+  letter-spacing: var(--pk-tr-tight);
+  text-transform: uppercase;
+  color: var(--pk-snow);
+  text-align: center;
+  margin: 0;
+  padding: 22px 56px 14px;
+  border-bottom: 1px solid var(--pk-border-1);
+  background: var(--pk-coal);
 }
 .bb-modal--mat.bb-modal--image .bb-modal__art {
   max-width: none;
@@ -339,7 +400,6 @@
   border-radius: var(--pk-r-md);
 }
 
-/* ═════════════ 67–68 · GALLERY GRID ═════════════ */
 .bb-gal-sec { background: var(--pk-void); }
 .bb-gal-sec--alt { background: var(--pk-coal); }
 
@@ -372,7 +432,7 @@
 .bb-gal__cell:hover .bb-gal__cap,
 .bb-gal__cell:focus-visible .bb-gal__cap { transform: translateY(0); }
 .bb-gal__cap em {
-  font-family: var(--pk-font-mono); font-size: 10px; letter-spacing: 0.16em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.16em;
   color: var(--pk-blood-300); font-style: normal;
 }
 .bb-gal__cap b {
@@ -380,11 +440,10 @@
   color: var(--pk-snow); letter-spacing: -0.2px;
 }
 .bb-gal__cap i {
-  font-family: var(--pk-font-mono); font-size: 9px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
   color: var(--pk-fg-3); font-style: normal; text-transform: uppercase;
 }
 
-/* ═════════════ 69 · ATMOSPHERIC SET ═════════════ */
 .bb-set-sec { background: var(--pk-void); }
 
 .bb-set__stage {
@@ -437,11 +496,10 @@
 }
 .bb-set__obj:focus-visible { outline: 2px solid var(--pk-blood-700); outline-offset: 2px; }
 
-/* shared media inside set objects */
 .bb-set__media { display: block; width: 100%; height: 100%; position: relative; border-radius: 4px; overflow: hidden; }
 .bb-set__media .bb-mat__ph { margin: 8px; padding: 12px; }
 .bb-set__media .bb-mat__ph-icon svg { width: 22px; height: 22px; }
-.bb-set__media .bb-mat__ph-name { font-size: 9px; letter-spacing: 0.1em; }
+.bb-set__media .bb-mat__ph-name { font-size: 14px; letter-spacing: 0.1em; }
 .bb-set__media .bb-mat__ph-dims,
 .bb-set__media .bb-mat__ph-hint { display: none; }
 
@@ -457,17 +515,16 @@
   pointer-events: none;
 }
 .bb-set__lbl i {
-  font-family: var(--pk-font-mono); font-size: 9px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
   color: var(--pk-blood-300); font-style: normal;
 }
 .bb-set__lbl b {
-  font-family: var(--pk-font-display); font-weight: 400; font-size: 11px;
+  font-family: var(--pk-font-display); font-weight: 400; font-size: 14px;
   color: var(--pk-snow); letter-spacing: -0.1px;
 }
 .bb-set__obj:hover .bb-set__lbl,
 .bb-set__obj:focus-visible .bb-set__lbl { opacity: 1; transform: translateY(0); }
 
-/* Position objects on stage (12-col × 6-row grid) */
 .bb-set__obj--poster  { grid-column: 1 / 4;  grid-row: 1 / 7; transform: rotate(-4deg); }
 .bb-set__obj--card    { grid-column: 5 / 7;  grid-row: 1 / 3; transform: rotate(7deg); }
 .bb-set__obj--member  { grid-column: 6 / 8;  grid-row: 2 / 4; transform: rotate(-9deg); }
@@ -500,7 +557,6 @@
 .bb-set__caption p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--pk-fg-2); }
 .bb-set__caption.is-active p b { color: var(--pk-snow); font-weight: 600; }
 
-/* ═════════════ RESPONSIVE ═════════════ */
 @media (max-width: 1100px) {
   .bb-mat-why__grid,
   .bb-mat-rules__grid { grid-template-columns: repeat(2, 1fr); }

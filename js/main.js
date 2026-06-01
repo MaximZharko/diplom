@@ -1,11 +1,7 @@
-/* =============================================================
-   КлубПаук · Brand Book — Main JS
-   Reveal, Tabs, Progress, Counters, Copy, Modals, Nav, Accordion
-   ============================================================= */
+
 ;(function(){
 'use strict';
 
-/* ─── REVEAL on scroll ─── */
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
@@ -13,7 +9,6 @@ const io = new IntersectionObserver((entries)=>{
 },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* ─── PROGRESS BAR ─── */
 const bar = document.querySelector('.bb-progress__bar');
 function updateProgress(){
   const h = document.documentElement.scrollHeight - window.innerHeight;
@@ -22,7 +17,6 @@ function updateProgress(){
 window.addEventListener('scroll', updateProgress, {passive:true});
 updateProgress();
 
-/* ─── TABS ─── */
 document.querySelectorAll('[role="tablist"]').forEach(list=>{
   const tabs = list.querySelectorAll('[role="tab"]');
   tabs.forEach(tab=>{
@@ -30,7 +24,7 @@ document.querySelectorAll('[role="tablist"]').forEach(list=>{
       const panelId = tab.getAttribute('aria-controls');
       const panel = document.getElementById(panelId);
       if(!panel) return;
-      // deactivate siblings
+
       tabs.forEach(t=>{
         t.classList.remove('is-active');
         t.setAttribute('aria-selected','false');
@@ -39,14 +33,14 @@ document.querySelectorAll('[role="tablist"]').forEach(list=>{
       list.closest('section, .bb-screen, .bb-tabpanel, div')
         ?.querySelectorAll('[role="tabpanel"]')
         ?.forEach(p=>{ p.classList.remove('is-active'); p.hidden = true; });
-      // also check siblings at same level
+
       const parent = panel.parentElement;
       if(parent){
         parent.querySelectorAll(':scope > [role="tabpanel"]').forEach(p=>{
           p.classList.remove('is-active'); p.hidden = true;
         });
       }
-      // activate
+
       tab.classList.add('is-active');
       tab.setAttribute('aria-selected','true');
       tab.removeAttribute('tabindex');
@@ -56,7 +50,6 @@ document.querySelectorAll('[role="tablist"]').forEach(list=>{
   });
 });
 
-/* ─── COUNTER ANIMATION ─── */
 const counterIO = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(!e.isIntersecting) return;
@@ -80,7 +73,6 @@ const counterIO = new IntersectionObserver((entries)=>{
 },{threshold:0.5});
 document.querySelectorAll('[data-counter]').forEach(el=>counterIO.observe(el));
 
-/* ─── COPY COLOR CODES ─── */
 const toast = document.getElementById('bb-toast');
 const toastCode = document.getElementById('bb-toast-code');
 let toastTimer;
@@ -98,7 +90,6 @@ document.querySelectorAll('[data-copy]').forEach(btn=>{
   });
 });
 
-/* ─── MODALS ─── */
 function openModal(modal){
   if(!modal) return;
   modal.classList.add('is-open');
@@ -113,10 +104,67 @@ function closeModal(modal){
 function closeAllModals(){
   document.querySelectorAll('.bb-modal.is-open').forEach(m=> closeModal(m));
 }
+function buildDetailSlider(modal, slides, alt){
+  const media = modal && modal.querySelector('.bb-mat__media');
+  if(!media) return;
+  const safeAlt = alt || 'Подробное изображение';
+  const imgsHtml = slides.map((src,i)=>
+    `<img class="bb-mat__photo${i===0?' is-active':''}" src="${src}" alt="${safeAlt}" loading="lazy" data-slide="${i}">`
+  ).join('');
+  const dotsHtml = slides.map((_,i)=>
+    `<button type="button" class="bb-mat__dot${i===0?' is-active':''}" data-slide-to="${i}" aria-label="Слайд ${i+1}"></button>`
+  ).join('');
+  media.classList.add('bb-mat__slider');
+  media.innerHTML = imgsHtml +
+    `<button type="button" class="bb-mat__nav bb-mat__nav--prev" data-detail-prev aria-label="Предыдущее изображение">‹</button>` +
+    `<button type="button" class="bb-mat__nav bb-mat__nav--next" data-detail-next aria-label="Следующее изображение">›</button>` +
+    `<span class="bb-mat__dots">${dotsHtml}</span>`;
+
+  const imgs = media.querySelectorAll('.bb-mat__photo');
+  const dots = media.querySelectorAll('.bb-mat__dot');
+  let idx = 0;
+  function go(i){
+    idx = (i + imgs.length) % imgs.length;
+    imgs.forEach((im,n)=> im.classList.toggle('is-active', n === idx));
+    dots.forEach((d,n)=> d.classList.toggle('is-active', n === idx));
+  }
+  media.querySelector('[data-detail-prev]').addEventListener('click', e=>{ e.preventDefault(); go(idx - 1); });
+  media.querySelector('[data-detail-next]').addEventListener('click', e=>{ e.preventDefault(); go(idx + 1); });
+  dots.forEach((dot,n)=>{
+    dot.addEventListener('click', e=>{ e.preventDefault(); go(n); });
+  });
+}
+
+function setDetailSingle(modal, src, alt){
+  const media = modal && modal.querySelector('.bb-mat__media');
+  if(!media) return;
+  media.classList.remove('bb-mat__slider');
+  media.innerHTML = `<img class="bb-mat__photo" src="${src}" alt="${alt || 'Подробное изображение'}" loading="lazy">`;
+}
+
 document.querySelectorAll('[data-modal-open]').forEach(btn=>{
   btn.addEventListener('click', ()=>{
-    const id = 'modal-' + btn.dataset.modalOpen;
-    openModal(document.getElementById(id));
+    const key = btn.dataset.modalOpen;
+    const id = 'modal-' + key;
+    const modal = document.getElementById(id);
+    if(key === 'mat-detail' || key === 'mat-mockup'){
+      const slidesAttr = btn.dataset.detailSlides;
+      const overrideSrc = btn.dataset.detailSrc;
+      const overrideAlt = btn.dataset.detailAlt;
+      if(slidesAttr){
+        const slides = slidesAttr.split(',').map(s=> s.trim()).filter(Boolean);
+        buildDetailSlider(modal, slides, overrideAlt);
+      } else if(overrideSrc){
+        setDetailSingle(modal, overrideSrc, overrideAlt);
+      } else {
+        const section = btn.closest('.bb-mat');
+        const srcImg = section && section.querySelector('.bb-mat__photo');
+        if(srcImg){
+          setDetailSingle(modal, srcImg.src, srcImg.alt);
+        }
+      }
+    }
+    openModal(modal);
   });
 });
 document.querySelectorAll('[data-modal-close]').forEach(btn=>{
@@ -133,7 +181,6 @@ document.addEventListener('keydown', e=>{
   if(e.key === 'Escape') closeAllModals();
 });
 
-/* ─── NAV: active chapter tracking ─── */
 const chips = document.querySelectorAll('.bb-nav__chip');
 const numEl = document.querySelector('[data-current-num] b');
 const nameEl = document.querySelector('[data-current-name]');
@@ -168,7 +215,6 @@ function updateCurrentScreen(){
 window.addEventListener('scroll', updateCurrentScreen, {passive:true});
 updateCurrentScreen();
 
-/* ─── MOBILE NAV toggle ─── */
 const toggle = document.querySelector('.bb-nav__toggle');
 const mobileNav = document.getElementById('bb-mobile-nav');
 if(toggle && mobileNav){
@@ -185,14 +231,12 @@ if(toggle && mobileNav){
   });
 }
 
-/* ─── ACCORDION ─── */
 document.querySelectorAll('.bb-acc details').forEach(det=>{
   det.querySelector('summary')?.addEventListener('click', e=>{
-    // allow default toggle
+
   });
 });
 
-/* ─── SET CAPTION (screen 69) ─── */
 const setCap = document.getElementById('bb-set-caption');
 document.querySelectorAll('.bb-set__obj').forEach(obj=>{
   obj.addEventListener('mouseenter', ()=>{
@@ -208,7 +252,26 @@ document.querySelectorAll('.bb-set__obj').forEach(obj=>{
   });
 });
 
-/* ─── TILT on hover (persona moodboard) ─── */
+document.querySelectorAll('[data-slider]').forEach(slider=>{
+  const slides = slider.querySelectorAll('[data-slide]');
+  const dots = slider.querySelectorAll('[data-slide-to]');
+  const prev = slider.querySelector('[data-slider-prev]');
+  const next = slider.querySelector('[data-slider-next]');
+  if(!slides.length) return;
+  let index = 0;
+  function go(i){
+    index = (i + slides.length) % slides.length;
+    slides.forEach((s,n)=> s.classList.toggle('is-active', n === index));
+    dots.forEach((d,n)=> d.classList.toggle('is-active', n === index));
+  }
+  function stop(e){ e.preventDefault(); e.stopPropagation(); }
+  prev?.addEventListener('click', e=>{ stop(e); go(index - 1); });
+  next?.addEventListener('click', e=>{ stop(e); go(index + 1); });
+  dots.forEach((dot,n)=>{
+    dot.addEventListener('click', e=>{ stop(e); go(n); });
+  });
+});
+
 document.querySelectorAll('[data-tilt]').forEach(el=>{
   el.addEventListener('mousemove', e=>{
     const r = el.getBoundingClientRect();

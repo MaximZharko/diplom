@@ -1,9 +1,4 @@
-/* ══════ css/style.css ══════ */
-/* =============================================================
-   КлубПаук · Brand Book — Раздел 1 «Введение»
-   Inherits tokens from css/tokens.css (--pk-*).
-   Mobile-first; tablet ≥768; desktop ≥1280.
-   ============================================================= */
+
 
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
@@ -16,6 +11,7 @@ body {
   color: var(--pk-fg-1);
   font-family: var(--pk-font-text);
   font-size: var(--pk-fs-base);
+  font-weight: var(--pk-w-bold);
   line-height: var(--pk-lh-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -34,7 +30,6 @@ img { display: block; max-width: 100%; }
   border-radius: var(--pk-r-sm);
 }
 
-/* ─────────── Reveal motion ─────────── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -47,9 +42,6 @@ img { display: block; max-width: 100%; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* =============================================================
-   PROGRESS BAR
-   ============================================================= */
 .bb-progress {
   position: fixed; top: 0; left: 0; right: 0; height: 2px;
   background: rgba(255,255,255,0.04);
@@ -62,9 +54,6 @@ img { display: block; max-width: 100%; }
   transition: width 120ms linear;
 }
 
-/* =============================================================
-   HEADER NAV
-   ============================================================= */
 .bb-nav {
   position: fixed; top: 0; left: 0; right: 0;
   display: grid;
@@ -81,7 +70,7 @@ img { display: block; max-width: 100%; }
 
 .bb-nav__brand {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--pk-font-display);
+  font-family: var(--pk-font-display-kir);
   font-size: 16px; letter-spacing: var(--pk-tr-tight);
   text-transform: uppercase;
   color: var(--pk-fg-1);
@@ -102,7 +91,7 @@ img { display: block; max-width: 100%; }
   background: #fff; color: var(--pk-blood);
   border-radius: 50%;
   font-family: var(--pk-font-display);
-  font-size: 9px; font-weight: 900;
+  font-size: 14px; font-weight: 900;
   display: grid; place-items: center;
   letter-spacing: 0;
 }
@@ -131,7 +120,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid transparent;
   white-space: nowrap;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -146,7 +135,7 @@ img { display: block; max-width: 100%; }
   font-style: normal;
   color: var(--pk-fg-4);
   font-weight: 700;
-  font-size: 10px;
+  font-size: 14px;
   transition: color var(--pk-d-base) var(--pk-ease-out);
 }
 .bb-nav__chip > span {
@@ -155,12 +144,12 @@ img { display: block; max-width: 100%; }
   gap: 0;
 }
 .bb-nav__chip > span em {
-  display: none; /* hide "Глава" label to save space */
+  display: none;
 }
 .bb-nav__chip > span b {
   font-weight: 500;
   color: inherit;
-  font-size: 10px;
+  font-size: 14px;
 }
 .bb-nav__chip:hover {
   color: var(--pk-fg-1);
@@ -177,15 +166,11 @@ img { display: block; max-width: 100%; }
 .bb-nav__chip.is-active i { color: var(--pk-blood-300); }
 .bb-nav__chip.is-active > span b { color: var(--pk-fg-1); }
 
-/* progress dots row under each chip */
 .bb-nav__chip-dots {
-  display: none; /* hide dots from inline — they clutter the nav */
+  display: none;
   text-decoration: none;
 }
 
-/* =============================================================
-   PAGE TABS NAV (multi-page switcher in КлубПаук style)
-   ============================================================= */
 .bb-pagenav {
   min-width: 0;
   overflow-x: auto;
@@ -212,7 +197,7 @@ img { display: block; max-width: 100%; }
   background: rgba(255, 255, 255, 0.015);
   white-space: nowrap;
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
@@ -228,7 +213,7 @@ img { display: block; max-width: 100%; }
 .bb-pagenav__tab i {
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--pk-fg-4);
   letter-spacing: 0;
   transition: color var(--pk-d-base) var(--pk-ease-out);
@@ -254,20 +239,18 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 980px) {
   .bb-pagenav { gap: 4px; padding: 0 4px; }
-  .bb-pagenav__tab { padding: 7px 12px; font-size: 10px; gap: 6px; }
-  .bb-pagenav__tab i { font-size: 9px; }
+  .bb-pagenav__tab { padding: 7px 12px; font-size: 14px; gap: 6px; }
+  .bb-pagenav__tab i { font-size: 14px; }
 }
 @media (max-width: 720px) {
   .bb-pagenav { display: none; }
 }
 
-
-
 .bb-nav__meta { display: flex; gap: 18px; align-items: center; }
 .bb-nav__chap {
   display: inline-flex; flex-direction: column; gap: 2px;
   font-family: var(--pk-font-mono);
-  font-size: 10px; line-height: 1.1;
+  font-size: 14px; line-height: 1.1;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -298,7 +281,6 @@ img { display: block; max-width: 100%; }
 .bb-nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .bb-nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
 
-/* mobile nav drawer */
 .bb-mobile {
   position: fixed; top: 70px; left: 0; right: 0;
   background: rgba(10,8,8,0.96);
@@ -323,15 +305,12 @@ img { display: block; max-width: 100%; }
 }
 .bb-mobile a i {
   font-style: normal;
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   color: var(--pk-blood-300);
   letter-spacing: var(--pk-tr-eyebrow);
 }
 .bb-mobile a:hover, .bb-mobile a:focus-visible { color: var(--pk-fg-1); border-color: var(--pk-border-red); background: rgba(108,26,26,0.08); }
 
-/* =============================================================
-   SHARED — screens, headings, buttons, cards
-   ============================================================= */
 main { padding-top: 70px; }
 
 .bb-screen {
@@ -350,7 +329,7 @@ main { padding-top: 70px; }
 
 .bb-eyebrow {
   font-family: var(--pk-font-mono);
-  font-size: var(--pk-fs-xs);
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
@@ -361,7 +340,7 @@ main { padding-top: 70px; }
 .bb-h {
   font-family: var(--pk-font-display-kir);
   font-weight: 400;
-  font-size: clamp(40px, 7vw, 104px);
+  font-size: clamp(32px, 5.5vw, 80px);
   line-height: 0.96;
   letter-spacing: var(--pk-tr-display);
   text-transform: uppercase;
@@ -380,7 +359,7 @@ main { padding-top: 70px; }
   max-width: 720px;
   text-wrap: pretty;
 }
-.bb-lede b { color: var(--pk-fg-1); font-weight: 600; }
+.bb-lede b { color: var(--pk-fg-1); font-weight: 800; }
 
 .bb-btn {
   display: inline-flex; align-items: center; gap: 10px;
@@ -407,7 +386,6 @@ main { padding-top: 70px; }
 }
 .bb-btn--ghost:hover { border-color: var(--pk-border-red); box-shadow: var(--pk-glow-red-sm); }
 
-/* generic card */
 .bb-card {
   position: relative;
   background: var(--pk-coal);
@@ -438,7 +416,7 @@ main { padding-top: 70px; }
 .bb-card header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 14px; }
 .bb-card__num {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   color: var(--pk-fg-4);
 }
@@ -474,7 +452,7 @@ main { padding-top: 70px; }
 .bb-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .bb-tags li {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -486,9 +464,6 @@ main { padding-top: 70px; }
 }
 .bb-tags li:hover { color: var(--pk-blood-300); border-color: var(--pk-border-red); }
 
-/* =============================================================
-   01 · COVER
-   ============================================================= */
 .bb-cover {
   min-height: 100vh;
   min-height: 100dvh;
@@ -522,7 +497,7 @@ main { padding-top: 70px; }
 .bb-cover__top {
   display: inline-flex; align-items: center; gap: 18px;
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -563,7 +538,7 @@ main { padding-top: 70px; }
 }
 
 .bb-cover__title {
-  font-family: var(--pk-font-display);
+  font-family: var(--pk-font-display-kir);
   font-weight: 400;
   font-size: clamp(72px, 16vw, 240px);
   line-height: 0.88;
@@ -579,7 +554,7 @@ main { padding-top: 70px; }
 .bb-cover__tagline {
   display: inline-flex; align-items: center; gap: 14px;
   font-family: var(--pk-font-mono);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -615,7 +590,7 @@ main { padding-top: 70px; }
 .bb-cover__meta em {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -634,7 +609,7 @@ main { padding-top: 70px; }
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 12px;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -657,9 +632,6 @@ main { padding-top: 70px; }
   100% { transform: translateY(48px); opacity: 0; }
 }
 
-/* =============================================================
-   02 · BRIEF
-   ============================================================= */
 .bb-brief__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -731,7 +703,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-brief__num-label {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -748,9 +720,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-brief__stat-body p { color: var(--pk-fg-2); font-size: 16px; line-height: 1.6; max-width: 640px; }
 .bb-brief__stat-body p b { color: var(--pk-fg-1); font-weight: 600; }
 
-/* =============================================================
-   03 · MISSION
-   ============================================================= */
 .bb-mission__lede {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -860,9 +829,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   margin-top: auto;
 }
 
-/* =============================================================
-   04 · UTP
-   ============================================================= */
 .bb-utp__quote {
   position: relative;
   padding: clamp(40px, 5vw, 72px) clamp(28px, 5vw, 80px);
@@ -906,13 +872,12 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-utp__quote figcaption {
   margin-top: 32px;
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 
-/* positioning map */
 .bb-utp__map {
   display: grid;
   grid-template-columns: 60px 1fr;
@@ -924,7 +889,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-utp__axis {
   display: flex;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -999,14 +964,14 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-utp__dot em {
   font-family: var(--pk-font-display);
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-tight);
   text-transform: uppercase;
 }
 .bb-utp__dot i {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -1081,9 +1046,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   color: var(--pk-fg-2);
 }
 
-/* =============================================================
-   05 · AUDIENCE — TABS
-   ============================================================= */
 .bb-tabs {
   display: flex; gap: 8px; flex-wrap: wrap;
   padding: 8px;
@@ -1111,7 +1073,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-tab em {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   color: var(--pk-fg-4);
 }
@@ -1188,7 +1150,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-persona__role {
   text-align: center;
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -1205,7 +1167,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-persona__card dl > div:last-child { border-bottom: none; }
 .bb-persona__card dt {
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -1271,9 +1233,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-persona__moodboard figure:hover img { transform: scale(1.04); filter: brightness(1) contrast(1.05); }
 
-/* =============================================================
-   06 · NAMING
-   ============================================================= */
 .bb-name__hero {
   display: flex; flex-direction: column; align-items: center;
   gap: 4px;
@@ -1401,7 +1360,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   border-radius: var(--pk-r-pill);
   background: rgba(108, 26, 26, 0.12);
   font-family: var(--pk-font-mono);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.04em;
   color: var(--pk-fg-1);
   width: fit-content;
@@ -1417,9 +1376,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-name__layer header { margin-bottom: 18px; }
 .bb-name__layer p { margin-top: auto; }
 
-/* =============================================================
-   07 · CONCEPT
-   ============================================================= */
 .bb-concept__lede {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1547,22 +1503,20 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-keyword--accent:hover { color: #fff !important; background: var(--pk-blood) !important; }
 
-/* =============================================================
-   08 · TOC
-   ============================================================= */
 .bb-toc__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 64px;
+  gap: 18px;
+  margin-bottom: 48px;
+  align-items: stretch;
   counter-reset: none;
 }
 .bb-toc__item { display: contents; }
 .bb-toc__card {
   position: relative;
-  display: flex; flex-direction: column; gap: 14px;
-  padding: 32px 28px 28px;
-  min-height: 280px;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 20px 22px 20px;
+  min-height: 0;
   background: var(--pk-coal);
   border: 1px solid var(--pk-border-2);
   border-radius: var(--pk-r-xl);
@@ -1588,7 +1542,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-toc__num {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: clamp(48px, 5vw, 72px);
+  font-size: clamp(32px, 3.2vw, 44px);
   line-height: 0.9;
   letter-spacing: var(--pk-tr-display);
   color: var(--pk-fg-3);
@@ -1598,7 +1552,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-toc__card h3 {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-tight);
   text-transform: uppercase;
   color: var(--pk-fg-1);
@@ -1611,14 +1565,15 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-toc__card h3 a:hover { color: var(--pk-blood-300); }
 .bb-toc__card p {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--pk-fg-2);
-  flex: 1;
+  flex: 0 0 auto;
+  margin: 0;
 }
 .bb-toc__meta {
   display: flex; flex-wrap: wrap; gap: 8px;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
 }
@@ -1634,9 +1589,9 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   border-color: var(--pk-border-red);
 }
 .bb-toc__arrow {
-  position: absolute; top: 28px; right: 28px;
+  position: absolute; top: 20px; right: 22px;
   font-family: var(--pk-font-display);
-  font-size: 24px;
+  font-size: 20px;
   color: var(--pk-fg-4);
   transition: transform var(--pk-d-base) var(--pk-ease-out),
               color var(--pk-d-base) var(--pk-ease-out);
@@ -1644,14 +1599,14 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-toc__card:hover .bb-toc__arrow { color: var(--pk-blood-300); transform: translate(4px, -4px); }
 
 .bb-toc__subs {
-  display: flex; flex-direction: column; gap: 6px;
-  margin-top: 4px;
-  padding-top: 12px;
+  display: flex; flex-direction: column; gap: 3px;
+  margin-top: 2px;
+  padding-top: 8px;
   border-top: 1px solid var(--pk-border-1);
 }
-.bb-toc__subs li { line-height: 1.4; }
+.bb-toc__subs li { line-height: 1.3; }
 .bb-toc__subs a {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--pk-fg-3);
   transition: color var(--pk-d-fast) var(--pk-ease-out);
 }
@@ -1659,27 +1614,27 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 .bb-toc__subs a::before {
   content: '→ ';
   color: var(--pk-fg-4);
-  font-size: 11px;
+  font-size: 14px;
 }
 
-/* Nested groups (used inside the “Фирменный стиль” TOC card) */
 .bb-toc__groups {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 4px;
-  padding-top: 14px;
+  gap: 14px;
+  margin-top: 2px;
+  padding-top: 12px;
   border-top: 1px solid var(--pk-border-1);
+  flex: 1;
 }
 .bb-toc__group h4 {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
-  margin: 0 0 8px 0;
-  line-height: 1.2;
+  margin: 0 0 4px 0;
+  line-height: 1.15;
 }
 .bb-toc__group h4 a {
   color: inherit;
@@ -1691,13 +1646,28 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   margin-top: 0;
   padding-top: 0;
   border-top: 0;
-  gap: 5px;
+  gap: 3px;
 }
 
-/* Wide TOC card: middle column is 2× as wide on big screens to fit nested groups */
+/* Card 04 (Фирменные носители): wider + auto-balanced 2-col layout (CSS columns) */
 @media (min-width: 1100px) {
   .bb-toc__grid {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1.6fr;
+  }
+  .bb-toc__item:nth-child(3) .bb-toc__groups {
+    display: block;
+    column-count: 2;
+    column-gap: 28px;
+    column-fill: balance;
+  }
+  .bb-toc__item:nth-child(3) .bb-toc__group {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 14px;
+  }
+  .bb-toc__item:nth-child(3) .bb-toc__group:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -1709,9 +1679,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-foot p { color: var(--pk-fg-2); font-size: 16px; margin-top: 8px; }
 
-/* =============================================================
-   MATERIAL GROUPS (Плакаты / Листовки / Вывеска / …) + MOCKUP PAGES
-   ============================================================= */
 .bb-mat-group {
   max-width: 1440px;
   margin: 0 auto;
@@ -1723,7 +1690,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-mat-group .bb-eyebrow {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -1747,7 +1714,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   margin-top: 8px;
 }
 
-/* Mockup pages — реальный носитель в среде */
 .bb-mat--mockup {
   padding-top: clamp(40px, 5vw, 64px);
   padding-bottom: clamp(60px, 7vw, 100px);
@@ -1773,7 +1739,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
 }
 .bb-mat__mock figcaption {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--pk-fg-3);
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
@@ -1800,20 +1766,33 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   .bb-mat-group__title { font-size: clamp(40px, 12vw, 56px); }
 }
 
-/* =============================================================
-   RESPONSIVE
-   ============================================================= */
 @media (max-width: 1280px) {
   .bb-nav { grid-template-columns: auto 1fr auto; gap: 16px; }
   .bb-nav__meta { display: none; }
-  .bb-nav__chip { padding: 4px 10px; font-size: 9px; gap: 5px; }
-  .bb-nav__chip i { font-size: 9px; }
-  .bb-nav__chip > span b { font-size: 9px; }
+  .bb-nav__chip { padding: 4px 10px; font-size: 14px; gap: 5px; }
+  .bb-nav__chip i { font-size: 14px; }
+  .bb-nav__chip > span b { font-size: 14px; }
   .bb-values { grid-template-columns: repeat(3, 1fr); }
   .bb-values .bb-value:nth-child(4),
   .bb-values .bb-value:nth-child(5) { grid-column: span 1; }
   .bb-name__layers { grid-template-columns: repeat(3, 1fr); }
   .bb-toc__grid { grid-template-columns: repeat(2, 1fr); }
+  .bb-toc__item:nth-child(3) .bb-toc__card { grid-column: 1 / -1; }
+  .bb-toc__item:nth-child(3) .bb-toc__groups {
+    display: block;
+    column-count: 2;
+    column-gap: 28px;
+    column-fill: balance;
+  }
+  .bb-toc__item:nth-child(3) .bb-toc__group {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 14px;
+  }
+  .bb-toc__item:nth-child(3) .bb-toc__group:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1867,7 +1846,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   .bb-values, .bb-values .bb-value:nth-child(5) { grid-template-columns: 1fr; grid-column: 1; }
 
   .bb-utp__map { height: 320px; grid-template-columns: 40px 1fr; grid-template-rows: 1fr 50px; }
-  .bb-utp__dot em { font-size: 11px; }
+  .bb-utp__dot em { font-size: 14px; }
   .bb-utp__dot i { display: none; }
 
   .bb-persona__body { grid-template-columns: 1fr; }
@@ -1886,7 +1865,7 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   .bb-cover__divider { display: none; }
   .bb-cover__meta { grid-template-columns: 1fr; }
   .bb-tabs { width: 100%; }
-  .bb-tab { flex: 1; padding: 12px 14px; font-size: 12px; justify-content: center; }
-  .bb-tab span { font-size: 11px; }
+  .bb-tab { flex: 1; padding: 12px 14px; font-size: 14px; justify-content: center; }
+  .bb-tab span { font-size: 14px; }
 }
 

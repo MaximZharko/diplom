@@ -1,9 +1,7 @@
-/* ══════ css/ch04.css ══════ */
-/* КлубПаук — Глава 04 · Типографика */
+
 
 .bb-chap-opener--04 { background: radial-gradient(120% 80% at 0% 100%, rgba(108,26,26,0.18), transparent 60%), var(--pk-void); }
 
-/* ---- 32 / 33 · type specimen ---- */
 .bb-tspec {
   display: grid;
   grid-template-columns: minmax(280px, 1.2fr) minmax(0, 1.6fr);
@@ -52,7 +50,7 @@
 }
 .bb-tspec__list > div:last-child { border-bottom: 0; }
 .bb-tspec__list dt {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
@@ -70,7 +68,7 @@
   background: var(--pk-coal);
 }
 .bb-tspec__sub {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
   margin: 0 0 14px;
@@ -95,7 +93,7 @@
   display: flex; flex-wrap: wrap; gap: 8px;
 }
 .bb-tspec__chips li {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   padding: 8px 14px;
   border: 1px solid var(--pk-border-1);
@@ -105,7 +103,6 @@
 }
 .bb-tspec__chips li:hover { color: var(--pk-fg-1); border-color: var(--pk-border-red); background: var(--pk-graphite); }
 
-/* ---- 34 · type pairing ---- */
 .bb-pair {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
@@ -120,7 +117,7 @@
 .bb-pair__eyebrow {
   font-family: var(--pk-font-text);
   font-weight: 600;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -183,7 +180,7 @@
 .bb-pair__example:hover { border-color: var(--pk-border-red); }
 .bb-pair__example-label {
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -206,7 +203,6 @@
   margin: 0;
 }
 
-/* ---- 35 · scale ---- */
 .bb-scale {
   list-style: none; padding: 0; margin: 0;
   display: flex; flex-direction: column;
@@ -231,7 +227,7 @@
 }
 .bb-scale__label p {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--pk-fg-3);
   letter-spacing: 0;
   margin: 0;
@@ -246,11 +242,10 @@
 .bb-scale__sample--h4      { font-family: var(--pk-font-text); font-weight: 600; font-size: 18px; line-height: 1.3; }
 .bb-scale__sample--lg      { font-family: var(--pk-font-text); font-weight: 400; font-size: 18px; line-height: 1.55; max-width: 56ch; }
 .bb-scale__sample--body    { font-family: var(--pk-font-text); font-weight: 400; font-size: 15px; line-height: 1.55; max-width: 64ch; color: var(--pk-fg-2); }
-.bb-scale__sample--cap     { font-family: var(--pk-font-text); font-weight: 500; font-size: 13px; line-height: 1.55; color: var(--pk-fg-2); }
-.bb-scale__sample--eye     { font-family: var(--pk-font-text); font-weight: 600; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pk-blood-300); }
+.bb-scale__sample--cap     { font-family: var(--pk-font-text); font-weight: 500; font-size: 14px; line-height: 1.55; color: var(--pk-fg-2); }
+.bb-scale__sample--eye     { font-family: var(--pk-font-text); font-weight: 600; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pk-blood-300); }
 .bb-scale__sample--score   { font-family: var(--pk-font-mono); font-weight: 700; font-size: 44px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--pk-blood-300); }
 
-/* ---- 36 · headlines in context ---- */
 .bb-set--head {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -294,7 +289,7 @@
 .bb-set__card--banner h3 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.05; }
 .bb-set__cap {
   font-family: var(--pk-font-mono);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -303,7 +298,6 @@
 }
 .bb-set__card--poster .bb-set__cap { color: rgba(255,255,255,0.85); }
 
-/* ---- 37 · body, quotes, captions ---- */
 .bb-set--body {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -361,7 +355,7 @@
 .bb-set__quote cite {
   font-family: var(--pk-font-mono);
   font-style: normal;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -381,7 +375,7 @@
 .bb-set__cap-list li:last-child { border-bottom: 0; }
 .bb-set__lbl {
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -400,7 +394,6 @@
   letter-spacing: 0;
 }
 
-/* ---- 39 · pvd table ---- */
 .bb-pvd {
   width: 100%;
   border-collapse: collapse;
@@ -416,7 +409,7 @@
 }
 .bb-pvd thead th {
   font-family: var(--pk-font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -443,11 +436,10 @@
 .bb-pvd tbody td:nth-child(4),
 .bb-pvd tbody td:nth-child(5) {
   font-family: var(--pk-font-mono);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--pk-fg-2);
 }
 
-/* ---- 40 · forbidden practices demos ---- */
 .bb-no__demo {
   position: relative;
   padding: 18px 22px;
@@ -477,7 +469,7 @@
 }
 @media (max-width: 768px) {
   .bb-scale__row { grid-template-columns: 1fr; gap: 8px; padding: 18px 20px; }
-  .bb-pvd { font-size: 13px; }
+  .bb-pvd { font-size: 14px; }
   .bb-pvd th, .bb-pvd td { padding: 10px 12px; }
   .bb-pvd { display: block; overflow-x: auto; white-space: nowrap; }
 }

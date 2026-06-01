@@ -1,9 +1,5 @@
-/* ══════ css/ch02.css ══════ */
-/* =============================================================
-   КлубПаук — Глава 02 · Логотип (стили для экранов 09–22)
-   ============================================================= */
 
-/* ---------- CHAPTER OPENER (ch-02 separator) ---------- */
+
 .bb-chap-opener {
   position: relative;
   min-height: 80vh;
@@ -69,7 +65,6 @@
   margin-top: 12px;
 }
 
-/* ---------- SECTION OPENER (within a chapter — Цвета / Типография) ---------- */
 .bb-section-opener {
   position: relative;
   padding: clamp(72px, 9vw, 140px) clamp(20px, 5vw, 80px);
@@ -122,7 +117,7 @@
 }
 .bb-section-opener__list li {
   font-family: var(--pk-font-mono);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -144,17 +139,15 @@
     linear-gradient(180deg, var(--pk-void) 0%, var(--pk-coal) 100%);
 }
 
-/* ---------- demoted h2 inside grouped sections ---------- */
 .bb-h--sub {
   font-size: clamp(28px, 3.4vw, 48px) !important;
   line-height: 1.05 !important;
 }
 
-/* ---------- common: tab pills for strategy ---------- */
 .bb-tab__pill {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   padding: 3px 7px;
@@ -170,7 +163,6 @@
   box-shadow: var(--pk-glow-red-sm);
 }
 
-/* ---------- 09 · STRATEGY ---------- */
 .bb-strat__panel {
   display: grid;
   grid-template-columns: minmax(380px, 1.3fr) minmax(280px, 1fr);
@@ -190,7 +182,7 @@
 .bb-strat__moodboard img { width: 100%; height: 100%; object-fit: contain; display: block; filter: saturate(0.9); }
 .bb-strat__moodboard figcaption {
   position: absolute; left: 16px; bottom: 14px;
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-1);
   background: rgba(0,0,0,0.6); padding: 6px 10px; border-radius: var(--pk-r-sm);
@@ -204,7 +196,7 @@
 .bb-strat__body { display: flex; flex-direction: column; gap: 16px; }
 .bb-strat__verdict {
   font-family: var(--pk-font-mono);
-  font-size: 11px; letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
+  font-size: 14px; letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   display: inline-flex; padding: 6px 12px; border-radius: var(--pk-r-pill);
   width: fit-content;
 }
@@ -220,7 +212,7 @@
 .bb-strat__body p b { color: var(--pk-fg-1); font-weight: 600; }
 .bb-strat__chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; }
 .bb-strat__chips li {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   padding: 5px 10px; border: 1px solid var(--pk-border-1);
   border-radius: var(--pk-r-pill); color: var(--pk-fg-3);
@@ -231,7 +223,7 @@
 }
 .bb-strat__why div { display: grid; grid-template-columns: 140px 1fr; gap: 16px; }
 .bb-strat__why dt {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
@@ -239,7 +231,6 @@
 
 .bb-tabpanel { padding-top: 0; }
 
-/* ---------- 10/11 · REJECT ---------- */
 .bb-reject { position: relative; }
 .bb-reject__stamp {
   position: absolute; top: clamp(80px, 10vw, 120px); right: clamp(20px, 5vw, 80px);
@@ -296,7 +287,6 @@
   font-family: var(--pk-font-display); font-size: 16px;
 }
 
-/* ---------- 12 · CHOSEN ---------- */
 .bb-chosen { position: relative; }
 .bb-chosen__stamp {
   position: absolute; top: clamp(80px, 10vw, 120px); right: clamp(20px, 5vw, 80px);
@@ -326,13 +316,12 @@
 }
 .bb-chosen__plate img { width: 100%; display: block; }
 .bb-chosen__hero figcaption {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-chosen__why { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 1.5vw, 20px); }
 
-/* ---------- 13 · MAIN LOGO ---------- */
 .bb-mainlogo__stage {
   position: relative;
   margin: 0 auto clamp(40px, 5vw, 64px);
@@ -368,7 +357,7 @@
   display: flex; flex-direction: column; gap: 8px;
 }
 .bb-mainlogo__spec dt {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
@@ -376,9 +365,8 @@
   font-family: var(--pk-font-display); font-weight: 400;
   font-size: 18px; letter-spacing: var(--pk-tr-tight); color: var(--pk-fg-1);
 }
-.bb-mainlogo__spec dd span { font-family: var(--pk-font-mono); color: var(--pk-fg-3); font-size: 13px; letter-spacing: 0; margin-left: 8px; }
+.bb-mainlogo__spec dd span { font-family: var(--pk-font-mono); color: var(--pk-fg-3); font-size: 14px; letter-spacing: 0; margin-left: 8px; }
 
-/* ---------- 14 · BUILD GRID ---------- */
 .bb-build__stage {
   position: relative;
   margin: 0;
@@ -411,7 +399,7 @@
 }
 .bb-build__tick {
   position: absolute;
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-blood-300);
   display: flex; align-items: center; gap: 8px;
@@ -443,9 +431,8 @@
   font-size: 32px; line-height: 1; color: var(--pk-blood-300);
   font-weight: 400; letter-spacing: var(--pk-tr-tight);
 }
-.bb-build__rules p { color: var(--pk-fg-2); font-size: 13px; line-height: 1.55; margin: 0; }
+.bb-build__rules p { color: var(--pk-fg-2); font-size: 14px; line-height: 1.55; margin: 0; }
 
-/* ---------- 15 · CLEAR SPACE ---------- */
 .bb-clear__stage {
   position: relative;
   margin: 0 auto clamp(36px, 4vw, 56px);
@@ -504,7 +491,6 @@
 .bb-clear__rules p { color: var(--pk-fg-2); font-size: 14px; line-height: 1.55; }
 .bb-clear__rules p b { display: inline; font-family: inherit; font-size: inherit; text-transform: none; color: var(--pk-blood-300); margin: 0; }
 
-/* ---------- 16 / 17 / 18 / 19 · TABS BLOCK BASE ---------- */
 .bb-tabs {
   display: inline-flex; gap: 4px;
   padding: 4px;
@@ -524,7 +510,7 @@
   cursor: pointer;
   color: var(--pk-fg-3);
   font-family: var(--pk-font-text);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.005em;
   transition: all var(--pk-d-base) var(--pk-ease-out);
@@ -532,7 +518,7 @@
 .bb-tab em {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -547,27 +533,22 @@
 .bb-tab.is-active em { color: rgba(255,255,255,0.7); }
 .bb-tab:focus-visible { outline: none; box-shadow: var(--pk-shadow-cue); }
 
-/* ---------- 16 · COLOR VERSIONS ---------- */
 .bb-colorset__panel {
-  display: grid; grid-template-columns: minmax(320px, 1.4fr) minmax(280px, 1fr);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
   gap: clamp(28px, 3vw, 48px); align-items: start;
 }
 .bb-colorset__plate {
   position: relative;
   border-radius: var(--pk-r-xl);
   overflow: hidden;
-  aspect-ratio: 16/10;
-  display: grid; place-items: center;
+  width: 100%;
+  max-width: 640px;
+  display: block;
   border: 1px solid var(--pk-border-2);
+  background: transparent;
+  margin: 0;
 }
-.bb-colorset__plate img { width: 95%; max-width: 900px; display: block; }
-.bb-colorset__plate--dark  { background: var(--pk-void); }
-.bb-colorset__plate--light { background: var(--pk-bone); }
-.bb-colorset__plate--mono  { background: var(--pk-bone-2); }
-.bb-colorset__plate--bw    { background: var(--pk-bone); }
-.bb-colorset__inv  { filter: invert(1) hue-rotate(180deg) saturate(1.4); }
-.bb-colorset__mono { filter: invert(1) sepia(1) hue-rotate(-25deg) saturate(6) brightness(0.55); }
-.bb-colorset__bw   { filter: invert(1) grayscale(1) brightness(0.6); }
+.bb-colorset__plate img { width: 100%; max-width: 100%; height: auto; display: block; }
 .bb-colorset__spec { display: flex; flex-direction: column; gap: 0; border-radius: var(--pk-r-lg); overflow: hidden; border: 1px solid var(--pk-border-1); }
 .bb-colorset__spec > div {
   display: grid; grid-template-columns: 110px 1fr; gap: 16px;
@@ -577,13 +558,12 @@
 }
 .bb-colorset__spec > div:last-child { border-bottom: 0; }
 .bb-colorset__spec dt {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-colorset__spec dd { color: var(--pk-fg-1); font-size: 14px; line-height: 1.5; }
 
-/* ---------- 17 · ORIENTATION ---------- */
 .bb-orient__panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
@@ -634,7 +614,7 @@
   z-index: 2;
 }
 .bb-orient__desc {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-blood-300);
 }
@@ -648,28 +628,20 @@
 }
 .bb-orient__use li b { color: var(--pk-fg-1); font-weight: 600; }
 
-/* ---------- 18 · BG SCENARIOS ---------- */
 .bb-bg__panel {
-  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
   gap: clamp(28px, 3vw, 48px); align-items: start;
 }
 .bb-bg__plate {
   border-radius: var(--pk-r-xl); overflow: hidden;
-  aspect-ratio: 16/10;
-  background: var(--pk-void);
-  display: grid; place-items: center;
+  width: 100%;
+  max-width: 640px;
+  background: transparent;
+  display: block;
   border: 1px solid var(--pk-border-2);
+  margin: 0;
 }
-.bb-bg__plate--light { background: var(--pk-bone); }
-.bb-bg__plate--photo { background-size: cover; background-position: center; position: relative; }
-.bb-bg__plate--photo::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
-.bb-bg__plate img { width: 90%; max-width: 820px; display: block; position: relative; z-index: 1; }
-.bb-bg__plate--env { background-size: cover; background-position: center; position: relative; }
-.bb-bg__plate--env::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(14,13,13,0.35) 0%, rgba(14,13,13,0.78) 75%);
-  z-index: 0;
-}
+.bb-bg__plate img { width: 100%; max-width: 100%; height: auto; display: block; }
 .bb-bg__note { padding-top: 12px; }
 .bb-bg__note h3 {
   font-family: var(--pk-font-display); font-weight: 400;
@@ -679,22 +651,23 @@
 }
 .bb-bg__note p { color: var(--pk-fg-2); font-size: 14px; line-height: 1.6; }
 
-/* ---------- 19 · TYPEBLOCK ---------- */
 .bb-typeblock__panel {
-  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, 1fr);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
   gap: clamp(28px, 3vw, 48px); align-items: center;
 }
 .bb-typeblock__plate {
   border-radius: var(--pk-r-xl); overflow: hidden;
-  aspect-ratio: 16/10;
-  background: var(--pk-void);
-  display: grid; place-items: center;
+  width: 100%;
+  max-width: 640px;
+  background: transparent;
+  display: block;
   border: 1px solid var(--pk-border-2);
-  padding: 32px;
+  padding: 0;
+  margin: 0;
 }
-.bb-typeblock__plate img { width: 100%; max-width: 820px; max-height: 100%; object-fit: contain; display: block; }
-.bb-typeblock__plate--icon { aspect-ratio: auto; padding: 0; max-width: max-content; margin-left: auto; margin-right: auto; }
-.bb-typeblock__plate--icon img { width: auto; max-width: 820px; max-height: none; }
+.bb-typeblock__plate img { width: 100%; max-width: 100%; height: auto; display: block; }
+.bb-typeblock__plate--icon { max-width: 640px; padding: 0; margin: 0; }
+.bb-typeblock__plate--icon img { width: 100%; max-width: 100%; height: auto; }
 .bb-typeblock__iconmark {
   width: 60%; height: 60%;
   display: grid; place-items: center;
@@ -725,7 +698,6 @@
   border-radius: 0 var(--pk-r-sm) var(--pk-r-sm) 0;
 }
 
-/* ---------- 20 / 21 · ACCORDIONS ---------- */
 .bb-acc { display: flex; flex-direction: column; gap: 0; border-radius: var(--pk-r-lg); overflow: hidden; border: 1px solid var(--pk-border-1); }
 .bb-acc__item { background: var(--pk-coal); border-bottom: 1px solid var(--pk-border-1); }
 .bb-acc__item:last-child { border-bottom: 0; }
@@ -741,7 +713,7 @@
 .bb-acc__item summary:hover { background: var(--pk-graphite); }
 .bb-acc__num {
   font-family: var(--pk-font-mono);
-  font-size: 12px; letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
+  font-size: 14px; letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-blood-300);
   font-weight: 500;
 }
@@ -787,7 +759,6 @@
   display: block;
 }
 
-/* ---------- 22 · MIN SIZES + DOWNLOADS ---------- */
 .bb-min__sizes {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: clamp(14px, 1.5vw, 20px);
@@ -808,7 +779,7 @@
 .bb-min__bar span { display: block; height: 100%; width: var(--w, 100%); background: linear-gradient(90deg, var(--pk-blood-400), var(--pk-blood)); border-radius: var(--pk-r-pill); }
 .bb-min__val { font-family: var(--pk-font-display); font-weight: 400; font-size: 28px; line-height: 1; color: var(--pk-fg-2); letter-spacing: var(--pk-tr-tight); margin: 0; }
 .bb-min__val b { color: var(--pk-fg-1); font-weight: 400; }
-.bb-min__cap { color: var(--pk-fg-3); font-size: 13px; line-height: 1.5; margin: 0; }
+.bb-min__cap { color: var(--pk-fg-3); font-size: 14px; line-height: 1.5; margin: 0; }
 .bb-min__sub {
   font-family: var(--pk-font-display); font-weight: 400;
   font-size: clamp(22px, 2vw, 32px);
@@ -853,7 +824,7 @@
   letter-spacing: var(--pk-tr-tight);
 }
 .bb-min__name { font-family: var(--pk-font-display); font-weight: 400; font-size: 20px; letter-spacing: var(--pk-tr-tight); color: var(--pk-fg-1); text-transform: uppercase; }
-.bb-min__meta { font-family: var(--pk-font-mono); font-size: 11px; color: var(--pk-fg-3); letter-spacing: 0.04em; text-transform: uppercase; }
+.bb-min__meta { font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-fg-3); letter-spacing: 0.04em; text-transform: uppercase; }
 .bb-min__arrow {
   grid-row: 1 / 3;
   display: grid; place-items: center;
@@ -866,7 +837,6 @@
 }
 .bb-min__file:hover .bb-min__arrow { color: var(--pk-blood-300); border-color: var(--pk-border-red); transform: translateY(2px); }
 
-/* ---------- responsive — chapter 02 ---------- */
 @media (max-width: 1024px) {
   .bb-strat__panel,
   .bb-colorset__panel,
@@ -891,7 +861,7 @@
   .bb-chap-opener__num { font-size: clamp(120px, 28vw, 200px); }
   .bb-mainlogo__spec { grid-template-columns: 1fr; }
   .bb-mainlogo__spec > div { grid-template-columns: 100px 1fr; padding: 16px 18px; }
-  .bb-clear__label--top, .bb-clear__label--bottom { font-size: 11px; padding: 3px 6px; }
+  .bb-clear__label--top, .bb-clear__label--bottom { font-size: 14px; padding: 3px 6px; }
   .bb-clear__label--left, .bb-clear__label--right { display: none; }
   .bb-build__rules, .bb-min__sizes { grid-template-columns: 1fr; }
   .bb-acc__item summary { grid-template-columns: 40px 1fr 24px; gap: 12px; padding: 18px 20px; }

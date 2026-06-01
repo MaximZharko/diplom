@@ -1,10 +1,7 @@
-/* ══════ css/ch03.css ══════ */
-/* КлубПаук — Глава 03 · Палитра */
 
-/* ---- chapter opener variant ---- */
+
 .bb-chap-opener--03 { background: radial-gradient(120% 80% at 50% 100%, rgba(108,26,26,0.22), transparent 60%), var(--pk-void); }
 
-/* ---- toast ---- */
 .bb-toast {
   position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 80px);
   display: inline-flex; align-items: center; gap: 12px;
@@ -12,7 +9,7 @@
   background: var(--pk-coal);
   border: 1px solid var(--pk-border-red);
   border-radius: var(--pk-r-pill);
-  font-family: var(--pk-font-mono); font-size: 12px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-1);
   box-shadow: var(--pk-glow-red);
@@ -24,7 +21,6 @@
 .bb-toast__check { color: var(--pk-blood-300); font-family: var(--pk-font-display); }
 .bb-toast__code { color: var(--pk-blood-300); font-weight: 700; }
 
-/* ---- swatches ---- */
 .bb-pal__grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(14px, 1.5vw, 20px);
@@ -54,7 +50,7 @@
   line-height: 1.05;
 }
 .bb-swatch__role {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   background: rgba(0,0,0,0.55); padding: 4px 8px; border-radius: var(--pk-r-xs);
   backdrop-filter: blur(6px);
@@ -84,12 +80,12 @@
 .bb-code:hover { background: var(--pk-graphite); }
 .bb-code:focus-visible { outline: none; background: var(--pk-graphite); box-shadow: inset 0 0 0 1px var(--pk-border-red); }
 .bb-code__label {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-code__val {
-  font-family: var(--pk-font-mono); font-size: 12px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   color: var(--pk-fg-1); letter-spacing: 0;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -98,13 +94,12 @@
   width: 22px; height: 22px;
   border-radius: 50%;
   color: var(--pk-fg-4);
-  font-size: 13px;
+  font-size: 14px;
   transition: all var(--pk-d-fast) var(--pk-ease-out);
 }
 .bb-code:hover .bb-code__copy { color: var(--pk-blood-300); }
 .bb-code.is-copied .bb-code__copy { color: var(--pk-win); }
 
-/* ---- gradients ---- */
 .bb-grad__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 28px); }
 .bb-grad {
   display: flex; flex-direction: column; gap: 12px;
@@ -127,17 +122,16 @@
   color: var(--pk-fg-1);
 }
 .bb-grad__use {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-grad__stops {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   color: var(--pk-fg-2); letter-spacing: 0;
 }
 .bb-grad__stops em { font-style: normal; color: var(--pk-blood-300); }
 
-/* ---- bad combinations ---- */
 .bb-bad__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.5vw, 20px); }
 .bb-bad {
   display: flex; flex-direction: column; gap: 12px;
@@ -152,6 +146,30 @@
   border-radius: var(--pk-r-md);
   display: grid; place-items: center;
   overflow: hidden;
+}
+.bb-bad__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--pk-r-md);
+  border: 1px solid var(--pk-border-1);
+  background: var(--pk-ink);
+  display: block;
+}
+.bb-bad__placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--pk-r-md);
+  border: 1px dashed var(--pk-border-1);
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 10px, transparent 10px 20px),
+    var(--pk-ink);
+  display: grid; place-items: center;
+  color: var(--pk-fg-3);
+  font-family: var(--pk-font-mono);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .bb-bad__demo::after {
   content: ''; position: absolute; inset: 0;
@@ -172,7 +190,6 @@
 .bb-bad__demo--5 { background: linear-gradient(135deg, #ff00cc, #00ffd5); } .bb-bad__demo--5 b { color: #fff; }
 .bb-bad__demo--6 { background: #F3F3F3; } .bb-bad__demo--6 b { color: #939393; }
 
-/* ---- rules demo blocks (screen-27) ---- */
 .bb-bad__grid--2 { grid-template-columns: repeat(2, 1fr); }
 [class*="bb-bad__demo--rule"]::after { display: none; }
 
@@ -180,10 +197,10 @@
 .bb-bad__demo--rule-1 span {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 16px; gap: 12px;
-  font-family: var(--pk-font-mono); font-size: 12px; letter-spacing: 0.02em;
+  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.02em;
 }
 .bb-bad__demo--rule-1 span em { font-style: normal; font-weight: 600; }
-.bb-bad__demo--rule-1 span i { font-style: normal; text-transform: uppercase; font-size: 10px; opacity: 0.7; }
+.bb-bad__demo--rule-1 span i { font-style: normal; text-transform: uppercase; font-size: 14px; opacity: 0.7; }
 .bb-bad__demo--rule-1 span:nth-child(1) { flex: 6; background: var(--pk-ink); color: var(--pk-fg-2); border-bottom: 1px solid var(--pk-border-1); }
 .bb-bad__demo--rule-1 span:nth-child(2) { flex: 3; background: var(--pk-blood); color: var(--pk-fg-1); }
 .bb-bad__demo--rule-1 span:nth-child(3) { flex: 1; background: var(--pk-bone); color: var(--pk-ink); }
@@ -205,7 +222,7 @@
 .bb-bad__demo--rule-2 i {
   flex-basis: 100%; text-align: center;
   font-style: normal; font-family: var(--pk-font-mono);
-  font-size: 10px; letter-spacing: 0.06em;
+  font-size: 14px; letter-spacing: 0.06em;
   color: var(--pk-fg-3); text-transform: uppercase;
   margin-top: 4px;
 }
@@ -227,7 +244,7 @@
 }
 .bb-bad__demo--rule-3 span i {
   font-style: normal; font-family: var(--pk-font-mono);
-  font-size: 11px; color: var(--pk-fg-3); letter-spacing: 0.04em;
+  font-size: 14px; color: var(--pk-fg-3); letter-spacing: 0.04em;
 }
 .bb-bad__demo--rule-3 span:nth-child(2) b { color: var(--pk-blood); }
 .bb-bad__demo--rule-3 span.is-fail b { color: var(--pk-felt); opacity: 0.55; }
@@ -245,11 +262,11 @@
 }
 .bb-bad__demo--rule-4 span em {
   font-family: var(--pk-font-mono); font-style: normal; font-weight: 700;
-  font-size: 11px; letter-spacing: 0.08em;
+  font-size: 14px; letter-spacing: 0.08em;
 }
 .bb-bad__demo--rule-4 span i {
   font-style: normal; font-family: var(--pk-font-mono);
-  font-size: 10px; letter-spacing: 0.04em;
+  font-size: 14px; letter-spacing: 0.04em;
 }
 .bb-bad__demo--rule-4 span:nth-child(1) { background: #34D17A; }
 .bb-bad__demo--rule-4 span:nth-child(1) em,
@@ -267,9 +284,8 @@
   font-family: var(--pk-font-display); font-weight: 400; font-size: 16px;
   letter-spacing: var(--pk-tr-tight); text-transform: uppercase; color: var(--pk-fg-1);
 }
-.bb-bad p { color: var(--pk-fg-2); font-size: 13px; line-height: 1.55; margin: 0; }
+.bb-bad p { color: var(--pk-fg-2); font-size: 14px; line-height: 1.55; margin: 0; }
 
-/* ---- digital vs print ---- */
 .bb-dvp__panel {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
   gap: clamp(28px, 3vw, 48px); align-items: start;
@@ -326,18 +342,17 @@
   border-bottom: 1px solid var(--pk-border-1);
 }
 .bb-dvp__row dt {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-dvp__row dd { color: var(--pk-fg-1); font-size: 14px; line-height: 1.55; }
 .bb-dvp__row dd code {
-  font-family: var(--pk-font-mono); font-size: 12px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   background: var(--pk-coal); padding: 2px 8px; border-radius: var(--pk-r-xs);
   color: var(--pk-blood-300);
 }
 
-/* ---- mockups (card + banner) ---- */
 .bb-mock__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
@@ -371,7 +386,7 @@
 }
 .bb-mock__cap em {
   font-style: normal;
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
@@ -390,7 +405,6 @@
 }
 .bb-mock:hover .bb-mock__zoom { background: var(--pk-blood); border-color: var(--pk-blood); box-shadow: var(--pk-glow-red-sm); }
 
-/* ---- mockup modal ---- */
 .bb-modal {
   position: fixed; inset: 0; z-index: 300;
   display: none;
@@ -428,7 +442,7 @@
   letter-spacing: var(--pk-tr-tight); text-transform: uppercase;
   color: var(--pk-fg-1);
 }
-.bb-modal__foot p { font-family: var(--pk-font-mono); font-size: 11px; color: var(--pk-fg-3); letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase; }
+.bb-modal__foot p { font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-fg-3); letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase; }
 .bb-modal__close {
   position: absolute; top: 14px; right: 14px; z-index: 2;
   display: grid; place-items: center;
@@ -443,7 +457,6 @@
 }
 .bb-modal__close:hover { background: var(--pk-blood); border-color: var(--pk-blood); box-shadow: var(--pk-glow-red-sm); }
 
-/* ---- psychology ---- */
 .bb-psy__grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(14px, 1.5vw, 22px);
@@ -477,13 +490,13 @@
   color: var(--pk-fg-1);
 }
 .bb-psy__hex {
-  font-family: var(--pk-font-mono); font-size: 11px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-psy__assoc { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .bb-psy__assoc li {
-  font-family: var(--pk-font-mono); font-size: 10px;
+  font-family: var(--pk-font-mono); font-size: 14px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   padding: 4px 9px; border: 1px solid var(--pk-border-1);
   border-radius: var(--pk-r-pill); color: var(--pk-fg-2);
