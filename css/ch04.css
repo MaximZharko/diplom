@@ -50,14 +50,14 @@
 }
 .bb-tspec__list > div:last-child { border-bottom: 0; }
 .bb-tspec__list dt {
-  font-family: var(--pk-font-mono); font-size: 14px;
+  font-family: var(--pk-font-mono); font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-tspec__list dd {
   margin: 0;
   font-family: var(--pk-font-text);
-  font-size: 14px; color: var(--pk-fg-1); line-height: 1.5;
+  font-size: 18px; color: var(--pk-fg-1); line-height: 1.5;
 }
 
 .bb-tspec__charset {
@@ -68,7 +68,7 @@
   background: var(--pk-coal);
 }
 .bb-tspec__sub {
-  font-family: var(--pk-font-mono); font-size: 14px;
+  font-family: var(--pk-font-mono); font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   color: var(--pk-fg-3);
   margin: 0 0 14px;
@@ -93,7 +93,7 @@
   display: flex; flex-wrap: wrap; gap: 8px;
 }
 .bb-tspec__chips li {
-  font-family: var(--pk-font-mono); font-size: 14px;
+  font-family: var(--pk-font-mono); font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow); text-transform: uppercase;
   padding: 8px 14px;
   border: 1px solid var(--pk-border-1);
@@ -117,7 +117,7 @@
 .bb-pair__eyebrow {
   font-family: var(--pk-font-text);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -135,7 +135,7 @@
 }
 .bb-pair__body {
   font-family: var(--pk-font-text);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.65;
   color: var(--pk-fg-1);
   max-width: 56ch;
@@ -150,7 +150,7 @@
 }
 .bb-pair__rules li {
   font-family: var(--pk-font-text);
-  font-size: 14px; line-height: 1.6;
+  font-size: 18px; line-height: 1.6;
   color: var(--pk-fg-2);
 }
 .bb-pair__rules li b {
@@ -180,7 +180,7 @@
 .bb-pair__example:hover { border-color: var(--pk-border-red); }
 .bb-pair__example-label {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -197,7 +197,7 @@
 }
 .bb-pair__example p {
   font-family: var(--pk-font-text);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--pk-fg-2);
   margin: 0;
@@ -227,7 +227,7 @@
 }
 .bb-scale__label p {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-3);
   letter-spacing: 0;
   margin: 0;
@@ -239,11 +239,11 @@
 .bb-scale__sample--h1      { font-family: var(--pk-font-display-kir); font-size: clamp(28px, 3.6vw, 48px); letter-spacing: -0.02em; text-transform: uppercase; line-height: 1.15; }
 .bb-scale__sample--h2      { font-family: var(--pk-font-display-kir); font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.02em; text-transform: uppercase; line-height: 1.15; }
 .bb-scale__sample--h3      { font-family: var(--pk-font-text); font-weight: 600; font-size: 24px; letter-spacing: -0.02em; line-height: 1.25; }
-.bb-scale__sample--h4      { font-family: var(--pk-font-text); font-weight: 600; font-size: 18px; line-height: 1.3; }
-.bb-scale__sample--lg      { font-family: var(--pk-font-text); font-weight: 400; font-size: 18px; line-height: 1.55; max-width: 56ch; }
-.bb-scale__sample--body    { font-family: var(--pk-font-text); font-weight: 400; font-size: 15px; line-height: 1.55; max-width: 64ch; color: var(--pk-fg-2); }
-.bb-scale__sample--cap     { font-family: var(--pk-font-text); font-weight: 500; font-size: 14px; line-height: 1.55; color: var(--pk-fg-2); }
-.bb-scale__sample--eye     { font-family: var(--pk-font-text); font-weight: 600; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pk-blood-300); }
+.bb-scale__sample--h4      { font-family: var(--pk-font-text); font-weight: 600; font-size: 20px; line-height: 1.3; }
+.bb-scale__sample--lg      { font-family: var(--pk-font-text); font-weight: 400; font-size: 20px; line-height: 1.55; max-width: 56ch; }
+.bb-scale__sample--body    { font-family: var(--pk-font-text); font-weight: 400; font-size: 18px; line-height: 1.55; max-width: 64ch; color: var(--pk-fg-2); }
+.bb-scale__sample--cap     { font-family: var(--pk-font-text); font-weight: 500; font-size: 18px; line-height: 1.55; color: var(--pk-fg-2); }
+.bb-scale__sample--eye     { font-family: var(--pk-font-text); font-weight: 600; font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pk-blood-300); }
 .bb-scale__sample--score   { font-family: var(--pk-font-mono); font-weight: 700; font-size: 44px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--pk-blood-300); }
 
 .bb-set--head {
@@ -289,7 +289,7 @@
 .bb-set__card--banner h3 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.05; }
 .bb-set__cap {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -315,7 +315,7 @@
 .bb-set__col:hover { border-color: var(--pk-border-red); }
 .bb-set__para {
   font-family: var(--pk-font-text);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.65;
   color: var(--pk-fg-1);
   margin: 0;
@@ -355,7 +355,7 @@
 .bb-set__quote cite {
   font-family: var(--pk-font-mono);
   font-style: normal;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -365,30 +365,29 @@
   display: flex; flex-direction: column;
 }
 .bb-set__cap-list li {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding: 10px 0;
   border-bottom: 1px solid var(--pk-border-1);
-  align-items: baseline;
 }
 .bb-set__cap-list li:last-child { border-bottom: 0; }
 .bb-set__lbl {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
 }
 .bb-set__cap-list span:not(.bb-set__lbl):not(.bb-set__mono) {
   font-family: var(--pk-font-text);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-1);
 }
 .bb-set__mono {
   font-family: var(--pk-font-mono);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-blood-300);
   font-variant-numeric: tabular-nums;
   letter-spacing: 0;
@@ -409,7 +408,7 @@
 }
 .bb-pvd thead th {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -421,13 +420,13 @@
 .bb-pvd tbody tr:last-child td { border-bottom: 0; }
 .bb-pvd tbody td {
   font-family: var(--pk-font-text);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-1);
 }
 .bb-pvd tbody td:first-child {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -436,7 +435,7 @@
 .bb-pvd tbody td:nth-child(4),
 .bb-pvd tbody td:nth-child(5) {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-2);
 }
 
@@ -449,7 +448,7 @@
   background: rgba(255, 23, 51, 0.04);
   color: var(--pk-fg-2);
 }
-.bb-no__demo--zd { font-family: var(--pk-font-display); font-size: 18px; line-height: 1.4; letter-spacing: -0.01em; text-transform: uppercase; }
+.bb-no__demo--zd { font-family: var(--pk-font-display); font-size: 20px; line-height: 1.4; letter-spacing: -0.01em; text-transform: uppercase; }
 .bb-no__demo--lower { font-family: var(--pk-font-display); font-size: 36px; line-height: 1; letter-spacing: -0.02em; text-transform: lowercase; }
 .bb-no__demo--ital { font-family: var(--pk-font-display); font-size: 36px; line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; transform: skew(-12deg); transform-origin: left center; }
 .bb-no__demo--stretch { font-family: var(--pk-font-display); font-size: 48px; line-height: 1; text-transform: uppercase; transform: scaleX(1.6); transform-origin: left center; letter-spacing: -0.02em; }
@@ -469,7 +468,7 @@
 }
 @media (max-width: 768px) {
   .bb-scale__row { grid-template-columns: 1fr; gap: 8px; padding: 18px 20px; }
-  .bb-pvd { font-size: 14px; }
+  .bb-pvd { font-size: 18px; }
   .bb-pvd th, .bb-pvd td { padding: 10px 12px; }
   .bb-pvd { display: block; overflow-x: auto; white-space: nowrap; }
 }

@@ -50,7 +50,7 @@
   margin-bottom: 6px;
 }
 .bb-mockup__overlay p {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-2);
   line-height: 1.4;
 }
@@ -90,12 +90,12 @@
 .bb-uniform h4 {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-uniform p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-uniform p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.5; }
 
 .bb-inv__grid {
   display: grid;
@@ -143,10 +143,10 @@
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-inv__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-inv__body p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-inv__spec {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -193,12 +193,12 @@
 .bb-digi__body h4 {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-digi__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-digi__body p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.5; }
 
 .bb-all__scene {
   position: relative;
@@ -238,7 +238,7 @@
 .bb-all__item--wide { grid-column: span 2; }
 .bb-all__item span {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -278,7 +278,7 @@
   padding: 12px 16px;
   background: linear-gradient(transparent, rgba(10,8,8,0.8));
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-2);
@@ -314,15 +314,15 @@
 .bb-motion h4 {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-motion p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-motion p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-motion code {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-fg-3);
 }
 
@@ -379,15 +379,15 @@
 .bb-season__body h4 {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-season__body p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.5; }
+.bb-season__body p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.5; }
 .bb-season__tag {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);

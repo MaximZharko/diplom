@@ -78,14 +78,14 @@
   --pk-fs-h1:       clamp(36px, 4.5vw, 56px);
   --pk-fs-h2:       clamp(28px, 3vw, 40px);
   --pk-fs-h3:       24px;
-  --pk-fs-h4:       18px;
+  --pk-fs-h4:       20px;
 
-  --pk-fs-lg:       18px;
+  --pk-fs-lg:       20px;
   --pk-fs-base:     18px;
-  --pk-fs-sm:       14px;
-  --pk-fs-xs:       14px;
+  --pk-fs-sm:       18px;
+  --pk-fs-xs:       18px;
   --pk-fs-mono-lg:  44px;
-  --pk-fs-mono:     14px;
+  --pk-fs-mono:     18px;
 
   --pk-tr-tight:    -0.02em;
   --pk-tr-display:  -0.03em;

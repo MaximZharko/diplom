@@ -18,7 +18,7 @@
 }
 .bb-mat-why { background: var(--pk-coal); padding: 32px 28px 28px; }
 .bb-mat-why__num {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.18em;
   color: var(--pk-blood-300); display: inline-block; margin-bottom: 14px;
 }
 .bb-mat-why h3 {
@@ -26,11 +26,11 @@
   font-size: 24px; letter-spacing: -0.5px; line-height: 1.1;
   color: var(--pk-snow); margin: 0 0 14px;
 }
-.bb-mat-why p { margin: 0 0 16px; font-size: 14px; line-height: 1.6; color: var(--pk-fg-2); }
+.bb-mat-why p { margin: 0 0 16px; font-size: 18px; line-height: 1.6; color: var(--pk-fg-2); }
 .bb-mat-why p b { color: var(--pk-snow); font-weight: 600; }
 .bb-mat-why ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--pk-border-1); padding-top: 14px; }
 .bb-mat-why li {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.04em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.04em;
   color: var(--pk-fg-2); padding: 6px 0;
   border-bottom: 1px dashed rgba(243,243,243,0.06);
 }
@@ -38,7 +38,7 @@
 
 .bb-mat-intro__foot {
   max-width: 1280px; margin: 24px auto 0;
-  padding: 18px 24px; font-size: 14px; line-height: 1.6;
+  padding: 18px 24px; font-size: 18px; line-height: 1.6;
   color: var(--pk-fg-2);
   border: 1px dashed var(--pk-border-1); border-radius: var(--pk-r-md);
 }
@@ -61,17 +61,17 @@
 .bb-mat-rule:hover { border-color: var(--pk-blood-700); transform: translateY(-2px); }
 .bb-mat-rule__n {
   display: inline-block;
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.18em;
   color: var(--pk-blood-300); margin-bottom: 12px;
 }
 .bb-mat-rule h4 {
-  font-family: var(--pk-font-display); font-weight: 400; font-size: 18px;
+  font-family: var(--pk-font-display); font-weight: 400; font-size: 20px;
   letter-spacing: -0.3px; color: var(--pk-snow); margin: 0 0 8px; line-height: 1.2;
 }
-.bb-mat-rule p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--pk-fg-2); }
+.bb-mat-rule p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--pk-fg-2); }
 .bb-mat-rule code {
   background: var(--pk-graphite); padding: 1px 6px; border-radius: 3px;
-  font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-blood-300);
+  font-family: var(--pk-font-mono); font-size: 18px; color: var(--pk-blood-300);
 }
 
 .bb-mat { background: var(--pk-void); }
@@ -137,15 +137,15 @@
 .bb-mat__ph-icon { color: var(--pk-blood-300); margin-bottom: 8px; }
 .bb-mat__ph-icon svg { width: 36px; height: 36px; display: block; }
 .bb-mat__ph-name {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.14em;
   color: var(--pk-snow); text-transform: uppercase;
 }
 .bb-mat__ph-dims {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.12em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.12em;
   color: var(--pk-fg-3);
 }
 .bb-mat__ph-hint {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.18em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--pk-blood-300);
   margin-top: 6px; padding: 3px 8px;
   border: 1px solid rgba(162,54,54,0.4); border-radius: 999px;
@@ -154,10 +154,45 @@
 .bb-mat__photo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .bb-modal--mat .bb-mat__photo { object-fit: contain; }
+
+/* === Карточки носителей на странице: размер диктует изображение === */
+/* Сбрасываем фиксированные пропорции рамок для карточек на странице,
+   чтобы карточка принимала размер своего изображения и не было пустот. */
+.bb-mat__layout .bb-mat__frame,
+.bb-mat__layout .bb-mat__frame--card,
+.bb-mat__layout .bb-mat__frame--card-w,
+.bb-mat__layout .bb-mat__frame--a2,
+.bb-mat__layout .bb-mat__frame--a4,
+.bb-mat__layout .bb-mat__frame--a6,
+.bb-mat__layout .bb-mat__frame--wide,
+.bb-mat__layout .bb-mat__frame--square,
+.bb-mat__layout .bb-mat__frame--cap {
+  aspect-ratio: auto;
+  align-self: start;
+}
+.bb-mat__layout .bb-mat__slider { align-self: start; }
+.bb-mat__layout .bb-mat__media { height: auto; }
+.bb-mat__layout .bb-mat__photo {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  object-fit: initial;
+}
+/* Слайдеры в карточках: оба слайда в одной grid-ячейке,
+   контейнер растягивается под наибольший слайд. */
+.bb-mat__layout .bb-mat__slider .bb-mat__media,
+.bb-mat__layout .bb-mat__media.bb-mat__slider {
+  display: grid;
+}
+.bb-mat__layout .bb-mat__slider .bb-mat__photo {
+  grid-column: 1;
+  grid-row: 1;
+}
 
 .bb-mat__slider { position: relative; display: block; }
 .bb-mat__slider .bb-mat__photo {
@@ -255,24 +290,24 @@
   margin: 4px 0 6px;
 }
 .bb-mat__dl > div {
-  display: grid; grid-template-columns: 130px 1fr; gap: 16px;
+  display: flex; flex-direction: column; gap: 4px;
   padding: 10px 0;
   border-top: 1px solid var(--pk-border-1);
 }
 .bb-mat__dl > div:last-child { border-bottom: 1px solid var(--pk-border-1); }
 .bb-mat__dl dt {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.16em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--pk-fg-3);
   padding-top: 2px;
 }
 .bb-mat__dl dd {
-  margin: 0; font-size: 14px; line-height: 1.5; color: var(--pk-snow);
+  margin: 0; font-size: 18px; line-height: 1.5; color: var(--pk-snow);
   font-feature-settings: "tnum";
 }
 
 .bb-mat__note {
   margin: 4px 0 6px;
-  font-size: 14px; line-height: 1.55; color: var(--pk-fg-2);
+  font-size: 18px; line-height: 1.55; color: var(--pk-fg-2);
   padding: 12px 14px;
   border-left: 2px solid var(--pk-blood-700);
   background: rgba(108,26,26,0.08);
@@ -323,16 +358,16 @@
 }
 .bb-modal--mat .bb-modal__side h3 em {
   font-style: normal; color: var(--pk-fg-2);
-  font-family: var(--pk-font-display); font-size: 16px;
+  font-family: var(--pk-font-display); font-size: 18px;
   letter-spacing: -0.2px;
   display: block; margin-top: 6px;
 }
 .bb-modal--mat .bb-modal__lede {
-  font-size: 14px; line-height: 1.6; color: var(--pk-fg-2); margin: 0;
+  font-size: 18px; line-height: 1.6; color: var(--pk-fg-2); margin: 0;
 }
 .bb-modal--mat .bb-modal__lede code {
   background: var(--pk-graphite); padding: 1px 5px; border-radius: 3px;
-  font-family: var(--pk-font-mono); font-size: 14px; color: var(--pk-blood-300);
+  font-family: var(--pk-font-mono); font-size: 18px; color: var(--pk-blood-300);
 }
 .bb-modal--mat .bb-mat__dl--lg > div { grid-template-columns: 150px 1fr; }
 
@@ -400,6 +435,74 @@
   border-radius: var(--pk-r-md);
 }
 
+.bb-modal--mat.bb-modal--image .bb-mat__media.bb-mat__slider {
+  position: relative;
+  width: 100%;
+  display: grid;
+}
+.bb-modal--mat.bb-modal--image .bb-mat__media.bb-mat__slider > .bb-mat__photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* === Модалки «Открыть крупно» / «Подробнее» / «Мокап»:
+       арт-контейнер принимает размер изображения, без рамки и пустот === */
+.bb-modal--mat .bb-modal__art.bb-mat__frame--card,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--card-w,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--a2,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--a4,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--a6,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--wide,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--square,
+.bb-modal--mat .bb-modal__art.bb-mat__frame--cap {
+  aspect-ratio: auto;
+}
+.bb-modal--mat .bb-modal__art {
+  padding: 0;
+  max-height: 92vh;
+  align-self: start;
+}
+.bb-modal--mat .bb-modal__art::before { display: none; }
+.bb-modal--mat .bb-modal__art .bb-mat__media {
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.bb-modal--mat .bb-modal__art .bb-mat__photo {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+}
+/* Карусельные модалки: оба слайда в одной grid-ячейке */
+.bb-modal--mat .bb-modal__art .bb-mat__media.bb-mat__slider {
+  display: grid;
+}
+.bb-modal--mat .bb-modal__art .bb-mat__media.bb-mat__slider > .bb-mat__photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Image-only модалки (mat-detail, mat-mockup): убираем рамку,
+   изображение вписывается целиком в окно (с учётом высоты caption-заголовка). */
+.bb-modal--mat.bb-modal--image .bb-modal__art {
+  padding: 12px;
+}
+.bb-modal--mat.bb-modal--image .bb-mat__photo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(92vh - 110px);
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
 .bb-gal-sec { background: var(--pk-void); }
 .bb-gal-sec--alt { background: var(--pk-coal); }
 
@@ -432,15 +535,15 @@
 .bb-gal__cell:hover .bb-gal__cap,
 .bb-gal__cell:focus-visible .bb-gal__cap { transform: translateY(0); }
 .bb-gal__cap em {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.16em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.16em;
   color: var(--pk-blood-300); font-style: normal;
 }
 .bb-gal__cap b {
-  font-family: var(--pk-font-display); font-weight: 400; font-size: 14px;
+  font-family: var(--pk-font-display); font-weight: 400; font-size: 18px;
   color: var(--pk-snow); letter-spacing: -0.2px;
 }
 .bb-gal__cap i {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.14em;
   color: var(--pk-fg-3); font-style: normal; text-transform: uppercase;
 }
 
@@ -499,7 +602,7 @@
 .bb-set__media { display: block; width: 100%; height: 100%; position: relative; border-radius: 4px; overflow: hidden; }
 .bb-set__media .bb-mat__ph { margin: 8px; padding: 12px; }
 .bb-set__media .bb-mat__ph-icon svg { width: 22px; height: 22px; }
-.bb-set__media .bb-mat__ph-name { font-size: 14px; letter-spacing: 0.1em; }
+.bb-set__media .bb-mat__ph-name { font-size: 18px; letter-spacing: 0.1em; }
 .bb-set__media .bb-mat__ph-dims,
 .bb-set__media .bb-mat__ph-hint { display: none; }
 
@@ -515,11 +618,11 @@
   pointer-events: none;
 }
 .bb-set__lbl i {
-  font-family: var(--pk-font-mono); font-size: 14px; letter-spacing: 0.14em;
+  font-family: var(--pk-font-mono); font-size: 18px; letter-spacing: 0.14em;
   color: var(--pk-blood-300); font-style: normal;
 }
 .bb-set__lbl b {
-  font-family: var(--pk-font-display); font-weight: 400; font-size: 14px;
+  font-family: var(--pk-font-display); font-weight: 400; font-size: 18px;
   color: var(--pk-snow); letter-spacing: -0.1px;
 }
 .bb-set__obj:hover .bb-set__lbl,
@@ -554,7 +657,7 @@
   min-height: 70px;
 }
 .bb-set__caption .bb-eyebrow { display: block; margin-bottom: 6px; }
-.bb-set__caption p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--pk-fg-2); }
+.bb-set__caption p { margin: 0; font-size: 18px; line-height: 1.5; color: var(--pk-fg-2); }
 .bb-set__caption.is-active p b { color: var(--pk-snow); font-weight: 600; }
 
 @media (max-width: 1100px) {

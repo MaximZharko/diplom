@@ -63,7 +63,7 @@
 .bb-pat__num {
   display: inline-block;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.18em;
   color: var(--pk-blood-300);
   margin-bottom: 8px;
@@ -80,13 +80,13 @@
 .bb-pat__cap h3 em {
   font-style: normal;
   color: var(--pk-fg-3);
-  font-size: 14px;
+  font-size: 18px;
   font-family: var(--pk-font-mono);
   letter-spacing: 0.06em;
   margin-left: 4px;
 }
 .bb-pat__cap p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--pk-fg-2);
   margin: 0 0 10px;
@@ -94,7 +94,7 @@
 }
 .bb-pat__cap code {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   color: var(--pk-fg-3);
   text-transform: uppercase;
@@ -150,7 +150,7 @@
 
 .bb-ico__name {
   font-family: var(--pk-font-display);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: -0.2px;
   color: var(--pk-snow);
   opacity: 0;
@@ -159,7 +159,7 @@
 }
 .bb-ico__sub {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--pk-fg-3);
@@ -177,7 +177,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 18px 24px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--pk-fg-2);
   background: var(--pk-void);
@@ -190,7 +190,7 @@
   padding: 2px 6px;
   border-radius: 4px;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-blood-300);
 }
 
@@ -255,7 +255,7 @@
   align-items: center;
   gap: 6px;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 4px 10px;
@@ -276,13 +276,13 @@
   margin: 0 0 6px;
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: -0.3px;
   color: var(--pk-snow);
 }
 .bb-photo p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--pk-fg-2);
   max-width: 44ch;
@@ -348,7 +348,7 @@
 }
 .bb-deco__num {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.18em;
   color: var(--pk-blood-300);
   margin-bottom: 10px;
@@ -364,7 +364,7 @@
 }
 .bb-deco__txt p {
   margin: 0 0 14px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--pk-fg-2);
   max-width: 42ch;
@@ -372,7 +372,7 @@
 .bb-deco__txt code {
   align-self: flex-start;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   color: var(--pk-fg-3);
   text-transform: uppercase;
@@ -416,7 +416,7 @@
 .bb-ctx__num {
   display: inline-block;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.18em;
   color: var(--pk-blood-300);
   margin-bottom: 8px;
@@ -425,13 +425,13 @@
   margin: 0 0 6px;
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px;
   letter-spacing: -0.3px;
   color: var(--pk-snow);
 }
 .bb-ctx p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   color: var(--pk-fg-2);
 }
@@ -440,7 +440,7 @@
   padding: 1px 5px;
   border-radius: 3px;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   color: var(--pk-blood-300);
 }
 

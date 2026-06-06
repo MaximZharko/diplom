@@ -35,12 +35,12 @@
   letter-spacing: var(--pk-tr-tight);
   color: var(--pk-fg-1);
 }
-.bb-result p { font-size: 14px; color: var(--pk-fg-2); line-height: 1.55; }
+.bb-result p { font-size: 18px; color: var(--pk-fg-2); line-height: 1.55; }
 
 .bb-sources { margin-top: 24px; }
 .bb-sources .bb-acc__body ul {
   display: flex; flex-direction: column; gap: 6px;
-  color: var(--pk-fg-2); font-size: 14px;
+  color: var(--pk-fg-2); font-size: 18px;
 }
 .bb-sources .bb-acc__body li {
   position: relative; padding-left: 16px; line-height: 1.5;
@@ -58,7 +58,7 @@
   filter: drop-shadow(var(--pk-glow-red));
 }
 .bb-final__title {
-  font-family: var(--pk-font-display);
+  font-family: var(--pk-font-display-kir);
   font-weight: 400;
   font-size: clamp(48px, 8vw, 120px);
   line-height: 0.9;
@@ -70,7 +70,7 @@
 }
 .bb-final__sub {
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-blood-300);
@@ -105,7 +105,7 @@
 .bb-final__info em {
   font-style: normal;
   font-family: var(--pk-font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-eyebrow);
   text-transform: uppercase;
   color: var(--pk-fg-4);
@@ -113,7 +113,7 @@
 .bb-final__info b {
   font-family: var(--pk-font-display);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: var(--pk-tr-tight);
   text-transform: uppercase;
   color: var(--pk-fg-1);
@@ -129,7 +129,7 @@
 .bb-final__copy {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--pk-fg-2);
   text-align: center;
