@@ -113,11 +113,7 @@
   transition: all var(--pk-d-base) var(--pk-ease-out);
 }
 .bb-grad:hover { border-color: var(--pk-border-red); box-shadow: var(--pk-glow-red-sm); }
-.bb-grad__chip { aspect-ratio: 16/7; border-radius: var(--pk-r-md); }
-.bb-grad__chip--1 { background: linear-gradient(135deg, #6C1A1A 0%, #0E0D0D 100%); }
-.bb-grad__chip--2 { background: linear-gradient(135deg, #A23636 0%, #6C1A1A 60%, #1A0606 100%); }
-.bb-grad__chip--3 { background: linear-gradient(135deg, #FFB347 0%, #6C1A1A 50%, #0E0D0D 100%); }
-.bb-grad__chip--4 { background: radial-gradient(120% 80% at 30% 30%, #6C1A1A 0%, #0E0D0D 65%, #000 100%); }
+.bb-grad__chip { display: block; width: 100%; aspect-ratio: 16/7; border-radius: var(--pk-r-md); object-fit: cover; }
 .bb-grad__head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .bb-grad__name {
   font-family: var(--pk-font-display); font-weight: 400;
