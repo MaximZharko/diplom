@@ -1,4 +1,3 @@
-
 ;(function(){
 'use strict';
 
@@ -230,27 +229,6 @@ if(toggle && mobileNav){
     });
   });
 }
-
-document.querySelectorAll('.bb-acc details').forEach(det=>{
-  det.querySelector('summary')?.addEventListener('click', e=>{
-
-  });
-});
-
-const setCap = document.getElementById('bb-set-caption');
-document.querySelectorAll('.bb-set__obj').forEach(obj=>{
-  obj.addEventListener('mouseenter', ()=>{
-    const role = obj.dataset.role;
-    if(setCap && role){
-      setCap.innerHTML = '<span class="bb-eyebrow bb-eyebrow--red">'+
-        (obj.querySelector('.bb-set__lbl b')?.textContent || '') +
-        '</span><p>'+ role +'</p>';
-    }
-  });
-  obj.addEventListener('mouseleave', ()=>{
-    if(setCap) setCap.innerHTML = '<span class="bb-eyebrow">Раскладка</span><p>Наведите курсор на\u00a0любой объект — здесь появится его роль в\u00a0комплекте.</p>';
-  });
-});
 
 document.querySelectorAll('[data-slider]').forEach(slider=>{
   const slides = slider.querySelectorAll('[data-slide]');

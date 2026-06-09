@@ -1,5 +1,3 @@
-
-
 .bb-results__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -52,10 +50,6 @@
 .bb-final {
   text-align: center;
   padding-bottom: clamp(120px, 16vh, 240px);
-}
-.bb-final__mark {
-  margin-bottom: 36px;
-  filter: drop-shadow(var(--pk-glow-red));
 }
 .bb-final__title {
   font-family: var(--pk-font-display-kir);
@@ -111,7 +105,7 @@
   color: var(--pk-fg-4);
 }
 .bb-final__info b {
-  font-family: var(--pk-font-display);
+  font-family: 'Unbounded', 'Inter', system-ui, sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: var(--pk-tr-tight);
