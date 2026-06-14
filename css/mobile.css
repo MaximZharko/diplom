@@ -1,0 +1,666 @@
+/* ============================================================
+   MOBILE OVERRIDES (loaded last) — desktop unchanged.
+   Все правила обёрнуты в @media и затрагивают только мобилку.
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* -- Базовая защита от горизонтального скролла -- */
+  html, body { overflow-x: hidden !important; max-width: 100% !important; }
+  body { font-size: 15px !important; }
+  img, video, iframe, svg, picture { max-width: 100% !important; height: auto; }
+
+  /* -- Защита от случайных flex/grid-переполнений -- */
+  .bb-screen,
+  .bb-cover,
+  .bb-mat-group { max-width: 100% !important; }
+
+  /* === НАВИГАЦИЯ === */
+  .bb-nav { padding: 12px 16px !important; gap: 12px !important; }
+  .bb-nav__chip,
+  .bb-nav__chip i,
+  .bb-nav__chip > span b { font-size: 12px !important; }
+  .bb-mobile { padding: 14px 16px 20px !important; }
+  .bb-mobile a { font-size: 14px !important; padding: 12px 14px !important; gap: 10px !important; }
+  .bb-mobile a i { font-size: 11px !important; }
+
+  /* === ОБЩИЕ КОМПОНЕНТЫ === */
+  .bb-screen { padding: clamp(48px, 9vw, 72px) 16px !important; }
+  .bb-screen__head { gap: 12px !important; margin-bottom: 28px !important; }
+
+  .bb-eyebrow { font-size: 12px !important; }
+  .bb-h { font-size: clamp(26px, 7vw, 36px) !important; line-height: 1.06 !important; }
+  .bb-h--sub { font-size: clamp(20px, 6vw, 28px) !important; line-height: 1.1 !important; }
+  .bb-lede { font-size: 14px !important; line-height: 1.5 !important; }
+
+  .bb-btn { font-size: 14px !important; padding: 11px 18px !important; }
+
+  .bb-mission__sub, .bb-utp__sub, .bb-name__sub, .bb-concept__sub {
+    font-size: clamp(18px, 5.6vw, 24px) !important;
+    margin-bottom: 18px !important;
+    gap: 12px !important;
+  }
+
+  /* === КАРТОЧКИ === */
+  .bb-card { padding: 20px 18px 22px !important; }
+  .bb-card h3, .bb-card h4 { font-size: 16px !important; }
+  .bb-card p { font-size: 14px !important; line-height: 1.5 !important; }
+  .bb-card__num { font-size: 12px !important; }
+
+  .bb-list, .bb-list li { font-size: 14px !important; }
+  .bb-tags li { font-size: 11px !important; padding: 4px 8px !important; }
+
+  /* === COVER (главный экран) === */
+  .bb-cover { padding: 36px 16px 32px !important; }
+  .bb-cover__title { font-size: clamp(34px, 11vw, 56px) !important; }
+  .bb-cover__tagline {
+    font-size: clamp(12px, 3.4vw, 16px) !important;
+    padding: 7px 14px !important;
+    gap: 8px !important;
+    margin-bottom: 24px !important;
+  }
+  .bb-cover__cta { margin-bottom: 36px !important; }
+  .bb-cover__cta .bb-btn { font-size: 14px !important; }
+  .bb-cover__meta { gap: 14px !important; padding-top: 20px !important; }
+  .bb-cover__meta em { font-size: 11px !important; }
+  .bb-cover__meta b  { font-size: 13px !important; }
+
+  /* === BRIEF GRID === */
+  .bb-brief__grid { gap: 14px !important; margin-bottom: 40px !important; }
+  .bb-brief__cardlink { font-size: 14px !important; bottom: 12px !important; right: 14px !important; }
+
+  /* === MISSION === */
+  .bb-mission__lede { margin-bottom: 48px !important; gap: 18px !important; }
+  .bb-mission__lede p { font-size: 14px !important; line-height: 1.55 !important; }
+  .bb-mission__pull {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    padding-left: 18px !important;
+  }
+
+  /* === ЦЕННОСТИ === */
+  .bb-values { gap: 12px !important; }
+  .bb-value { padding: 22px 18px 24px !important; min-height: auto !important; gap: 10px !important; }
+  .bb-value__num { font-size: 24px !important; }
+  .bb-value h4 { font-size: 17px !important; }
+  .bb-value p { font-size: 14px !important; line-height: 1.5 !important; }
+
+  /* === UTP QUOTE === */
+  .bb-utp__quote { padding: 28px 20px !important; margin-bottom: 48px !important; }
+  .bb-utp__quote blockquote { font-size: clamp(17px, 4.6vw, 22px) !important; line-height: 1.22 !important; }
+  .bb-utp__quote figcaption { font-size: 11px !important; margin-top: 20px !important; }
+
+  /* === UTP MAP (стратегия позиционирования) === */
+  .bb-utp__map {
+    height: 280px !important;
+    grid-template-columns: 28px 1fr !important;
+    grid-template-rows: 1fr 40px !important;
+    margin-bottom: 28px !important;
+  }
+  .bb-utp__axis { font-size: 10px !important; }
+  .bb-utp__axis--y { padding: 6px 0 !important; }
+  .bb-utp__axis--x {
+    font-size: 10px !important;
+    padding: 8px 6px 0 !important;
+    gap: 4px;
+    overflow: hidden;
+  }
+  .bb-utp__axis-end { font-size: 10px !important; white-space: nowrap; }
+  .bb-utp__plane { background-size: 100% 25%, 25% 100%, auto; }
+  .bb-utp__dot em { font-size: 11px !important; max-width: 90px; }
+  .bb-utp__dot i { display: none !important; }
+  .bb-utp__crosshair { width: 56px !important; height: 56px !important; }
+  .bb-utp__dot--us::before { width: 14px !important; height: 14px !important; }
+  .bb-utp__dot::before { width: 10px !important; height: 10px !important; }
+
+  .bb-utp__map-desc { gap: 10px !important; margin-top: -36px !important; margin-bottom: 48px !important; }
+  .bb-utp__map-desc p { font-size: 13px !important; padding: 14px 16px !important; line-height: 1.5 !important; }
+
+  /* === UTP LIST === */
+  .bb-utp__list { gap: 12px !important; }
+  .bb-utp__list li { padding: 18px 20px !important; gap: 14px !important; }
+  .bb-utp__num { font-size: 26px !important; }
+  .bb-utp__list p { font-size: 14px !important; line-height: 1.5 !important; }
+
+  /* === PERSONA === */
+  .bb-persona { gap: 20px !important; }
+  .bb-persona__card { padding: 24px 20px !important; gap: 16px !important; }
+  .bb-persona__avatar { width: 96px !important; height: 96px !important; font-size: 36px !important; }
+  .bb-persona__card h3 { font-size: 22px !important; }
+  .bb-persona__role { font-size: 12px !important; padding-bottom: 16px !important; }
+  .bb-persona__card dt { font-size: 11px !important; }
+  .bb-persona__card dd { font-size: 14px !important; }
+  .bb-persona__body { gap: 14px !important; }
+  .bb-persona__col { padding: 22px 20px !important; }
+  .bb-persona__col h4 { font-size: 16px !important; margin-bottom: 14px !important; padding-bottom: 12px !important; }
+
+  /* === NAME === */
+  .bb-name__hero { padding: 32px 0 !important; margin: 0 -16px 48px !important; }
+  .bb-name__hero-en { font-size: 11px !important; }
+  .bb-name__hero-ru { font-size: clamp(42px, 13vw, 64px) !important; line-height: 0.95 !important; }
+
+  .bb-name__grid { gap: 18px !important; margin-bottom: 48px !important; }
+  .bb-name__col { padding: 24px 20px !important; gap: 16px !important; }
+  .bb-name__col h3 { font-size: 16px !important; }
+  .bb-name__intro,
+  .bb-name__why { font-size: 14px !important; line-height: 1.5 !important; }
+  .bb-name__rejected li { font-size: 13px !important; padding: 7px 12px !important; }
+  .bb-name__final { font-size: clamp(34px, 11vw, 56px) !important; }
+  .bb-name__vote { font-size: 12px !important; padding: 6px 12px !important; }
+  .bb-name__col--final::before { width: 240px !important; height: 240px !important; }
+
+  .bb-name__layers { gap: 10px !important; }
+  .bb-name__layer { padding: 22px 18px !important; min-height: auto !important; }
+
+  /* === CONCEPT === */
+  .bb-concept__lede { gap: 16px !important; margin-bottom: 48px !important; }
+  .bb-concept__lede p { font-size: 14px !important; line-height: 1.55 !important; padding-top: 18px !important; }
+
+  /* Смысловая концепция: на мобилке — flex-колонка с «+» как круглой плашкой между карточками */
+  .bb-concept__split {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    margin-bottom: 48px !important;
+  }
+  .bb-concept__char {
+    padding: 24px 20px !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .bb-concept__char h3 { font-size: clamp(26px, 8vw, 40px) !important; }
+  .bb-concept__char li { font-size: 14px !important; }
+  .bb-concept__char::before { width: 140px !important; height: 140px !important; }
+
+  .bb-concept__plus {
+    align-self: center !important;
+    display: grid !important;
+    place-items: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: -16px 0 !important;
+    padding: 0 !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    background: var(--pk-blood) !important;
+    border: 2px solid var(--pk-ink) !important;
+    border-radius: 50% !important;
+    box-shadow: var(--pk-glow-red-sm) !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* === KEYWORDS === */
+  .bb-keywords { gap: 6px !important; }
+  .bb-keywords li { font-size: 13px !important; padding: 9px 14px !important; }
+
+  /* === TOC === */
+  .bb-toc__grid { gap: 12px !important; margin-bottom: 32px !important; }
+  .bb-toc__card { padding: 18px 18px !important; gap: 6px !important; }
+  .bb-toc__num { font-size: clamp(26px, 8vw, 36px) !important; }
+  .bb-toc__card h3 { font-size: 16px !important; }
+  .bb-toc__card p { font-size: 13px !important; line-height: 1.45 !important; }
+  .bb-toc__arrow { font-size: 16px !important; top: 16px !important; right: 18px !important; }
+  .bb-toc__subs a,
+  .bb-toc__subs a::before { font-size: 13px !important; }
+  .bb-toc__group h4 { font-size: 12px !important; }
+  .bb-toc__groups { gap: 10px !important; padding-top: 10px !important; }
+
+  /* === MAT GROUP (заголовки глав в гл. 6) === */
+  .bb-mat-group { padding: 48px 16px 20px !important; gap: 10px !important; }
+  .bb-mat-group__title { font-size: clamp(36px, 11vw, 56px) !important; }
+
+  /* ===========================================================
+     ГЛАВА 2 — Стратегия / типографика / акценты
+     =========================================================== */
+  .bb-chap-opener { padding: 56px 16px !important; min-height: auto !important; }
+  .bb-chap-opener__inner { gap: 14px !important; }
+  .bb-chap-opener__num { font-size: clamp(72px, 24vw, 120px) !important; line-height: 0.88 !important; }
+  .bb-chap-opener__title { font-size: clamp(26px, 7.5vw, 40px) !important; line-height: 1.05 !important; }
+  .bb-chap-opener__lede { font-size: 14px !important; line-height: 1.5 !important; }
+
+  /* Strat panel */
+  .bb-strat__panel { gap: 20px !important; padding-top: 14px !important; }
+  .bb-strat__moodboard { min-height: 220px !important; }
+  .bb-strat__moodboard figcaption { font-size: 11px !important; padding: 4px 8px !important; }
+  .bb-strat__verdict { font-size: 11px !important; padding: 5px 10px !important; }
+  .bb-strat__body h3 { font-size: 18px !important; }
+  .bb-strat__body p,
+  .bb-strat__why dd { font-size: 14px !important; line-height: 1.55 !important; }
+  .bb-strat__why dt,
+  .bb-strat__chips li { font-size: 11px !important; padding: 4px 9px !important; }
+  .bb-strat__why div { gap: 4px !important; }
+
+  /* Tabs */
+  .bb-tabs {
+    padding: 4px !important;
+    gap: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap !important;
+    scrollbar-width: none;
+  }
+  .bb-tabs::-webkit-scrollbar { display: none; }
+  .bb-tab {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    gap: 6px !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+  .bb-tab em { font-size: 11px !important; }
+  .bb-tab__pill { font-size: 10px !important; padding: 2px 6px !important; }
+
+  /* Chosen / Build */
+  .bb-chosen__hero { gap: 10px !important; margin-bottom: 36px !important; }
+  .bb-chosen__hero figcaption { font-size: 11px !important; }
+  .bb-build__plate { max-width: 100% !important; }
+  .bb-build__plate img { max-width: 100% !important; }
+
+  /* Accordion */
+  .bb-acc__item summary {
+    padding: 16px 16px !important;
+    grid-template-columns: 32px 1fr 22px !important;
+    gap: 10px !important;
+  }
+  .bb-acc__num { font-size: 11px !important; }
+  .bb-acc__title { font-size: 14px !important; }
+  .bb-acc__body { padding: 0 16px 18px 58px !important; font-size: 14px !important; line-height: 1.55 !important; }
+
+  /* Colorset / Typeblock */
+  .bb-colorset__panel,
+  .bb-typeblock__panel { gap: 20px !important; grid-template-columns: 1fr !important; }
+  .bb-colorset__plate,
+  .bb-typeblock__plate { max-width: 100% !important; }
+  .bb-colorset__spec > div { padding: 12px 16px !important; }
+  .bb-colorset__spec dt { font-size: 12px !important; }
+  .bb-colorset__spec dd { font-size: 14px !important; }
+  .bb-typeblock__use li { font-size: 13px !important; padding: 12px 14px !important; }
+
+  /* ===========================================================
+     ГЛАВА 3 — Цвет / палитра
+     =========================================================== */
+  .bb-pal__grid { gap: 12px !important; margin-bottom: 28px !important; }
+
+  .bb-swatch__chip { padding: 14px 16px !important; }
+  .bb-swatch__name { font-size: clamp(16px, 5.2vw, 22px) !important; }
+  .bb-swatch__role { font-size: 10px !important; padding: 3px 6px !important; }
+  .bb-code { grid-template-columns: 56px 1fr 22px !important; padding: 10px 14px !important; gap: 8px !important; }
+  .bb-code__label { font-size: 11px !important; }
+  .bb-code__val { font-size: 12px !important; }
+
+  .bb-grad { padding: 14px !important; gap: 10px !important; }
+  .bb-grad__name { font-size: 16px !important; }
+  .bb-grad__stops { font-size: 11px !important; }
+
+  .bb-bad { padding: 14px !important; }
+  .bb-bad h4 { font-size: 15px !important; }
+  .bb-bad p { font-size: 13px !important; line-height: 1.5 !important; }
+
+  .bb-psy { padding: 22px 20px !important; gap: 12px !important; }
+  .bb-psy__chip { width: 44px !important; height: 44px !important; }
+  .bb-psy h4 { font-size: 18px !important; }
+  .bb-psy__hex { font-size: 11px !important; }
+  .bb-psy__assoc li { font-size: 10px !important; padding: 3px 7px !important; }
+  .bb-psy p { font-size: 13px !important; line-height: 1.55 !important; }
+
+  .bb-toast { font-size: 12px !important; padding: 12px 18px !important; }
+
+  /* Модалки общие */
+  .bb-modal { padding: 16px !important; }
+  .bb-modal__foot { padding: 14px 16px !important; }
+  .bb-modal__foot h4 { font-size: 14px !important; }
+  .bb-modal__foot p { font-size: 11px !important; }
+
+  /* ===========================================================
+     ГЛАВА 4 — Типографика
+     =========================================================== */
+  .bb-tspec { padding: 22px 18px !important; gap: 18px !important; grid-template-columns: 1fr !important; }
+  .bb-tspec__hero { font-size: clamp(72px, 22vw, 110px) !important; line-height: 0.86 !important; }
+  .bb-tspec--alt .bb-tspec__hero { font-size: clamp(50px, 16vw, 80px) !important; }
+  .bb-tspec__list > div {
+    grid-template-columns: 100px 1fr !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+  .bb-tspec__list dt { font-size: 11px !important; }
+  .bb-tspec__list dd { font-size: 13px !important; line-height: 1.45 !important; }
+  .bb-tspec__charset { padding: 18px !important; margin-top: 18px !important; }
+  .bb-tspec__sub { font-size: 11px !important; }
+  .bb-tspec__row { font-size: clamp(16px, 5vw, 22px) !important; word-break: break-word !important; }
+
+  .bb-pair { padding: 22px 18px !important; gap: 18px !important; }
+  .bb-pair__eyebrow { font-size: 11px !important; }
+  .bb-pair__display { font-size: clamp(34px, 10vw, 56px) !important; line-height: 1.02 !important; }
+  .bb-pair__body { font-size: 14px !important; line-height: 1.55 !important; }
+  .bb-pair__examples { gap: 12px !important; margin-top: 20px !important; }
+
+  .bb-scale__row { padding: 16px !important; gap: 6px !important; }
+  .bb-scale__label p { font-size: 11px !important; }
+  .bb-scale__sample--hero    { font-size: clamp(28px, 8.5vw, 44px) !important; }
+  .bb-scale__sample--display { font-size: clamp(22px, 7vw, 36px) !important; }
+  .bb-scale__sample--h1      { font-size: clamp(20px, 6vw, 28px) !important; }
+  .bb-scale__sample--h2      { font-size: clamp(18px, 5.4vw, 24px) !important; }
+  .bb-scale__sample--h3      { font-size: 18px !important; }
+  .bb-scale__sample--h4      { font-size: 16px !important; }
+  .bb-scale__sample--lg,
+  .bb-scale__sample--body,
+  .bb-scale__sample--cap     { font-size: 14px !important; line-height: 1.5 !important; }
+  .bb-scale__sample--eye     { font-size: 11px !important; }
+  .bb-scale__sample--score   { font-size: 28px !important; }
+
+  /* ===========================================================
+     ГЛАВА 5 — Паттерны / фото / декоры
+     =========================================================== */
+  .bb-pat__grid { gap: 14px !important; }
+  .bb-pat__cap { padding: 14px 16px 16px !important; }
+  .bb-pat__num { font-size: 11px !important; }
+  .bb-pat__cap h3 { font-size: 18px !important; }
+  .bb-pat__cap h3 em { font-size: 11px !important; }
+  .bb-pat__cap p,
+  .bb-pat__cap code { font-size: 13px !important; line-height: 1.5 !important; }
+
+  .bb-photo__grid { gap: 14px !important; }
+  .bb-photo figcaption { padding: 14px 16px 16px !important; }
+  .bb-photo__tag { font-size: 11px !important; padding: 3px 8px !important; }
+  .bb-photo h4 { font-size: 16px !important; }
+  .bb-photo p { font-size: 13px !important; line-height: 1.5 !important; }
+
+  /* ===========================================================
+     ГЛАВА 6 — Носители (материалы)
+     =========================================================== */
+  .bb-mat__layout { gap: 16px !important; }
+  .bb-mat__specs { padding: 20px 18px !important; gap: 12px !important; }
+  .bb-mat__dl dt { font-size: 11px !important; }
+  .bb-mat__dl dd { font-size: 14px !important; }
+  .bb-mat__note { font-size: 13px !important; padding: 10px 12px !important; }
+  .bb-mat__nav { width: 36px !important; height: 36px !important; font-size: 20px !important; }
+  .bb-mat__nav--prev { left: 8px !important; }
+  .bb-mat__nav--next { right: 8px !important; }
+  .bb-mat__zoom { width: 32px !important; height: 32px !important; }
+  .bb-mat__zoom svg { width: 14px !important; height: 14px !important; }
+  .bb-mat__dots { bottom: 10px !important; padding: 4px 8px !important; }
+
+  .bb-modal--mat .bb-modal__inner { width: min(96vw, 100%) !important; max-width: min(96vw, 100%) !important; }
+  .bb-modal--mat .bb-modal__art { padding: 16px !important; }
+  .bb-modal--mat .bb-modal__side { padding: 22px 20px !important; gap: 10px !important; }
+  .bb-modal--mat .bb-modal__side h3 { font-size: 20px !important; }
+  .bb-modal--mat .bb-modal__side h3 em,
+  .bb-modal--mat .bb-modal__lede,
+  .bb-modal--mat .bb-modal__lede code { font-size: 13px !important; }
+  .bb-modal__caption { font-size: clamp(14px, 4.4vw, 18px) !important; padding: 14px 44px 10px !important; }
+
+  /* ===========================================================
+     ГЛАВА 7 — Мокапы / digital / форма
+     =========================================================== */
+  .bb-mockup__grid { gap: 12px !important; }
+  .bb-mockup__overlay { padding: 16px !important; opacity: 1 !important; }
+  .bb-mockup__overlay h4 { font-size: 15px !important; }
+  .bb-mockup__overlay p { font-size: 12px !important; line-height: 1.4 !important; }
+
+  .bb-uniform__grid { gap: 12px !important; }
+  .bb-uniform { padding: 24px 18px !important; gap: 14px !important; }
+  .bb-uniform h4 { font-size: 16px !important; }
+  .bb-uniform p { font-size: 13px !important; line-height: 1.5 !important; }
+
+  .bb-inv__grid { gap: 14px !important; }
+  .bb-inv__body { padding: 20px 18px !important; gap: 8px !important; }
+  .bb-inv__body h4 { font-size: 16px !important; }
+  .bb-inv__body p { font-size: 13px !important; line-height: 1.5 !important; }
+
+  .bb-digi__grid { gap: 14px !important; }
+
+  .bb-all__scene { padding: 24px 16px !important; gap: 10px !important; }
+  .bb-all__item { padding: 12px !important; gap: 10px !important; }
+  .bb-all__item svg { width: 36px !important; height: 36px !important; }
+  .bb-all__item span { font-size: 11px !important; }
+
+  /* ===========================================================
+     ГЛАВА 8 — Результаты / финал
+     =========================================================== */
+  .bb-results__grid { gap: 12px !important; margin-bottom: 48px !important; }
+  .bb-result { padding: 22px 20px !important; gap: 12px !important; }
+  .bb-result__num { font-size: 32px !important; }
+  .bb-result h4 { font-size: 16px !important; }
+  .bb-result p { font-size: 13px !important; line-height: 1.5 !important; }
+
+  .bb-sources .bb-acc__body ul,
+  .bb-sources .bb-acc__body li { font-size: 13px !important; }
+
+  .bb-final { padding-bottom: 80px !important; }
+  .bb-final__title { font-size: clamp(32px, 9vw, 52px) !important; margin-bottom: 18px !important; }
+  .bb-final__sub { font-size: 11px !important; padding: 6px 14px !important; margin-bottom: 32px !important; gap: 10px !important; }
+  .bb-final__info { gap: 10px !important; margin-bottom: 36px !important; }
+  .bb-final__info > div { padding: 16px !important; }
+  .bb-final__info em { font-size: 11px !important; }
+  .bb-final__info b { font-size: 13px !important; }
+  .bb-final__cta { margin-bottom: 32px !important; gap: 10px !important; }
+  .bb-final__copy { font-size: 13px !important; line-height: 1.55 !important; }
+}
+
+/* ============================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ (≤ 480px) — точечные ужатия
+   ============================================================ */
+@media (max-width: 480px) {
+  body { font-size: 14px !important; }
+
+  .bb-screen { padding: 40px 14px !important; }
+
+  .bb-cover__title { font-size: clamp(30px, 11vw, 44px) !important; }
+  .bb-chap-opener__num { font-size: clamp(60px, 24vw, 96px) !important; }
+  .bb-chap-opener__title { font-size: clamp(22px, 7vw, 30px) !important; }
+  .bb-mat-group__title { font-size: clamp(30px, 11vw, 44px) !important; }
+  .bb-name__hero-ru { font-size: clamp(36px, 13vw, 52px) !important; }
+  .bb-final__title { font-size: clamp(28px, 9vw, 40px) !important; }
+  .bb-tspec__hero { font-size: clamp(60px, 22vw, 88px) !important; }
+  .bb-tspec--alt .bb-tspec__hero { font-size: clamp(42px, 16vw, 64px) !important; }
+
+  /* Карта стратегии: подписи осей — ещё компактнее */
+  .bb-utp__axis--x { font-size: 9px !important; padding: 6px 2px 0 !important; }
+  .bb-utp__axis--y { font-size: 9px !important; }
+  .bb-utp__map { grid-template-columns: 22px 1fr !important; }
+
+  /* tspec list — компактнее лейблы */
+  .bb-tspec__list > div { grid-template-columns: 92px 1fr !important; gap: 8px !important; }
+
+  /* Карточки в персоне ещё немного */
+  .bb-persona__avatar { width: 84px !important; height: 84px !important; font-size: 30px !important; }
+
+  /* Финальный блок — карточки в одну колонку (уже есть в ch08, но дублируем для гарантии) */
+  .bb-final__info { grid-template-columns: 1fr !important; }
+}
+
+/* ============================================================
+   КОМПАКТНАЯ РАСКЛАДКА КАРТОЧЕК НА МОБИЛКЕ
+   Возвращаем 2 (где возможно — 3) колонки вместо одной,
+   уменьшаем внутренние отступы и шрифты — чтобы листать
+   не так длинно. Только для (max-width: 768px).
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* ---- ОБЩИЕ КАРТОЧКИ В 2 КОЛОНКИ (изображение + текст) ---- */
+  .bb-bad__grid,
+  .bb-photo__grid,
+  .bb-pat__grid,
+  .bb-psy__grid,
+  .bb-results__grid,
+  .bb-mockup__grid,
+  .bb-uniform__grid,
+  .bb-digi__grid,
+  .bb-toc__grid,
+  .bb-values,
+  .bb-brief__grid,
+  .bb-name__layers,
+  .bb-final__info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* Цвета: основные (3 шт.) и расширенные (2 шт.) — в 2 колонки */
+  .bb-pal__grid,
+  .bb-pal__grid--2,
+  .bb-pal__grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* Снимаем «span 2» / «span 12» / «span all» — на мобилке мешают сетке */
+  .bb-brief__card,
+  .bb-brief__card--wide,
+  .bb-mockup--full,
+  .bb-all__item--wide,
+  .bb-values .bb-value:nth-child(5),
+  .bb-name__layers .bb-name__layer:last-child {
+    grid-column: auto !important;
+  }
+  /* TOC: третий пункт (фирменные носители) тоже не растягивать */
+  .bb-toc__item:nth-child(3) .bb-toc__card { grid-column: auto !important; }
+  .bb-toc__item:nth-child(3) .bb-toc__groups {
+    display: flex !important;
+    flex-direction: column !important;
+    column-count: 1 !important;
+  }
+
+  /* ---- УЖИМАЕМ ВНУТРЕННОСТИ КАРТОЧЕК ПОД УЗКУЮ КОЛОНКУ ---- */
+
+  /* «Допустимые / недопустимые использования» (.bb-bad) */
+  .bb-bad { padding: 10px !important; gap: 8px !important; }
+  .bb-bad__img { aspect-ratio: 4/3 !important; border-radius: var(--pk-r-sm) !important; }
+  .bb-bad h4 { font-size: 13px !important; line-height: 1.2 !important; }
+  .bb-bad p  { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Фото do/don't */
+  .bb-photo figcaption { padding: 10px 12px 12px !important; }
+  .bb-photo__tag { font-size: 9px !important; padding: 2px 6px !important; letter-spacing: 0.12em !important; }
+  .bb-photo h4 { font-size: 13px !important; }
+  .bb-photo p  { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Паттерны */
+  .bb-pat__cap { padding: 10px 12px 12px !important; }
+  .bb-pat__num { font-size: 9px !important; letter-spacing: 0.12em !important; }
+  .bb-pat__cap h3 { font-size: 14px !important; }
+  .bb-pat__cap h3 em { display: none !important; }
+  .bb-pat__cap p, .bb-pat__cap code { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Психология цвета */
+  .bb-psy { padding: 14px 12px !important; gap: 8px !important; }
+  .bb-psy__chip { width: 28px !important; height: 28px !important; border-radius: 6px !important; }
+  .bb-psy h4 { font-size: 14px !important; }
+  .bb-psy__hex { font-size: 9px !important; letter-spacing: 0.12em !important; }
+  .bb-psy__assoc { gap: 4px !important; }
+  .bb-psy__assoc li { font-size: 9px !important; padding: 2px 5px !important; letter-spacing: 0.1em !important; }
+  .bb-psy p { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Палитра — карточки цветов */
+  .bb-swatch__chip { padding: 10px 12px !important; }
+  .bb-swatch__name { font-size: 14px !important; }
+  .bb-swatch__role { font-size: 9px !important; padding: 2px 5px !important; letter-spacing: 0.12em !important; }
+  .bb-code {
+    grid-template-columns: 38px 1fr 18px !important;
+    padding: 7px 10px !important;
+    gap: 6px !important;
+  }
+  .bb-code__label { font-size: 9px !important; letter-spacing: 0.1em !important; }
+  .bb-code__val   { font-size: 10px !important; }
+
+  /* Карточки ценностей (главный экран и стр. 2) */
+  .bb-value { padding: 14px 12px 16px !important; gap: 8px !important; min-height: auto !important; }
+  .bb-value__num { font-size: 18px !important; }
+  .bb-value h4 { font-size: 13px !important; line-height: 1.1 !important; }
+  .bb-value p  { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* TOC карточки (главная — содержание) */
+  .bb-toc__card { padding: 14px 12px !important; }
+  .bb-toc__num { font-size: 24px !important; }
+  .bb-toc__card h3 { font-size: 13px !important; line-height: 1.1 !important; }
+  .bb-toc__card p { font-size: 10.5px !important; line-height: 1.35 !important; }
+  .bb-toc__arrow { font-size: 13px !important; top: 12px !important; right: 12px !important; }
+  .bb-toc__subs a,
+  .bb-toc__subs a::before { font-size: 10.5px !important; }
+  .bb-toc__subs { gap: 1px !important; padding-top: 6px !important; }
+  .bb-toc__group h4 { font-size: 10px !important; letter-spacing: 0.12em !important; }
+  .bb-toc__groups { gap: 8px !important; padding-top: 8px !important; }
+
+  /* Brief grid (главная — описание) */
+  .bb-brief__cardlink { font-size: 12px !important; right: 12px !important; bottom: 10px !important; }
+
+  /* Результаты (страница 4) */
+  .bb-result { padding: 14px 12px !important; gap: 8px !important; }
+  .bb-result__num { font-size: 24px !important; }
+  .bb-result h4 { font-size: 13px !important; line-height: 1.1 !important; }
+  .bb-result p  { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Мокапы — оверлей всегда виден на мобилке */
+  .bb-mockup__overlay { padding: 10px !important; }
+  .bb-mockup__overlay h4 { font-size: 12px !important; line-height: 1.15 !important; }
+  .bb-mockup__overlay p  { font-size: 10px !important; line-height: 1.3 !important; }
+
+  /* Униформа */
+  .bb-uniform { padding: 14px 10px !important; gap: 10px !important; }
+  .bb-uniform h4 { font-size: 13px !important; }
+  .bb-uniform p  { font-size: 11px !important; line-height: 1.4 !important; }
+
+  /* Финальный блок — мини-карточки в 2 колонки */
+  .bb-final__info > div { padding: 12px !important; }
+  .bb-final__info em { font-size: 10px !important; letter-spacing: 0.12em !important; }
+  .bb-final__info b  { font-size: 12px !important; }
+
+  /* Имя — слои (5 слоев → 2 колонки) */
+  .bb-name__layer { padding: 14px 12px !important; min-height: auto !important; }
+  .bb-name__layer header { margin-bottom: 10px !important; }
+  .bb-name__layer .bb-card__num { font-size: 10px !important; }
+  .bb-name__layer h3,
+  .bb-name__layer h4 { font-size: 12px !important; line-height: 1.1 !important; }
+  .bb-name__layer p { font-size: 11px !important; line-height: 1.4 !important; }
+}
+
+/* ============================================================
+   МАЛЕНЬКИЕ ТЕЛЕФОНЫ (≤ 380px) — допустимые ужатия,
+   но всё ещё 2 в ряд для большинства сеток.
+   ============================================================ */
+@media (max-width: 380px) {
+  .bb-bad__grid,
+  .bb-photo__grid,
+  .bb-pat__grid,
+  .bb-psy__grid,
+  .bb-results__grid,
+  .bb-mockup__grid,
+  .bb-uniform__grid,
+  .bb-digi__grid,
+  .bb-toc__grid,
+  .bb-values,
+  .bb-brief__grid,
+  .bb-name__layers,
+  .bb-final__info,
+  .bb-pal__grid,
+  .bb-pal__grid--2,
+  .bb-pal__grid--4 {
+    gap: 8px !important;
+  }
+
+  .bb-bad,
+  .bb-photo figcaption,
+  .bb-pat__cap,
+  .bb-psy,
+  .bb-value,
+  .bb-toc__card,
+  .bb-result,
+  .bb-final__info > div,
+  .bb-uniform,
+  .bb-name__layer { padding: 10px 9px !important; }
+
+  .bb-bad h4, .bb-photo h4, .bb-pat__cap h3,
+  .bb-psy h4, .bb-toc__card h3, .bb-value h4,
+  .bb-result h4, .bb-uniform h4, .bb-name__layer h3,
+  .bb-name__layer h4 { font-size: 12px !important; }
+
+  .bb-bad p, .bb-photo p, .bb-pat__cap p,
+  .bb-psy p, .bb-toc__card p, .bb-value p,
+  .bb-result p, .bb-uniform p, .bb-name__layer p { font-size: 10.5px !important; }
+}
+
