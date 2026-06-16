@@ -1471,7 +1471,6 @@ a.bb-brief__card:hover .bb-brief__cardlink { transform: translateX(4px); }
   gap: 3px;
 }
 
-/* Card 04 (Фирменные носители): wider + auto-balanced 2-col layout (CSS columns) */
 @media (min-width: 1100px) {
   .bb-toc__grid {
     grid-template-columns: 1fr 1fr 1.6fr;

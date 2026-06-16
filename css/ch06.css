@@ -52,8 +52,6 @@
 }
 .bb-modal--mat .bb-mat__photo { object-fit: contain; }
 
-/* Карточки носителей на странице: размер диктует изображение,
-   рамки не задают пропорции — карточка принимает размер своего изображения. */
 .bb-mat__layout .bb-mat__frame,
 .bb-mat__layout .bb-mat__frame--card,
 .bb-mat__layout .bb-mat__frame--card-w,
@@ -75,8 +73,6 @@
   height: auto;
   object-fit: initial;
 }
-/* Слайдеры в карточках: оба слайда в одной grid-ячейке,
-   контейнер растягивается под наибольший слайд. */
 .bb-mat__layout .bb-mat__slider .bb-mat__media,
 .bb-mat__layout .bb-mat__media.bb-mat__slider {
   display: grid;
@@ -337,8 +333,6 @@
   grid-row: 1;
 }
 
-/* Модалки «Открыть крупно» / «Подробнее» / «Мокап»:
-   арт-контейнер принимает размер изображения, без рамки и пустот. */
 .bb-modal--mat .bb-modal__art.bb-mat__frame--card,
 .bb-modal--mat .bb-modal__art.bb-mat__frame--card-w,
 .bb-modal--mat .bb-modal__art.bb-mat__frame--a2,
@@ -370,7 +364,6 @@
   object-fit: contain;
   display: block;
 }
-/* Карусельные модалки: оба слайда в одной grid-ячейке. */
 .bb-modal--mat .bb-modal__art .bb-mat__media.bb-mat__slider {
   display: grid;
 }
@@ -379,8 +372,6 @@
   grid-row: 1;
 }
 
-/* Image-only модалки (mat-detail, mat-mockup): убираем рамку,
-   изображение вписывается целиком в окно (с учётом высоты caption-заголовка). */
 .bb-modal--mat.bb-modal--image .bb-modal__art {
   padding: 12px;
 }
